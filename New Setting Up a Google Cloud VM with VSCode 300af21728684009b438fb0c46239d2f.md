@@ -67,7 +67,7 @@ In this step, you will create a new VM in your Google Cloud account.
 
 <aside>
 
-![Alt text](image5.png)
+![Alt text](new_project_position.png)
 
 </aside>
 
@@ -77,7 +77,7 @@ In this step, you will create a new VM in your Google Cloud account.
 
 <aside>
 
-![Alt text](image3.png)
+![Alt text](create_instance.png)
 
 </aside>
 
@@ -93,7 +93,7 @@ You can reduce costs by selecting "Spot" instances under VM provisioning model, 
 <aside>
 
 
-![Alt text](image4.png)
+![Alt text](spot_position.png)
 
 </aside>
 
@@ -187,7 +187,7 @@ With your SSH keys configured, you can now connect to the VM using VSCode.
 - Click "Configure SSH Hosts" and choose the file where your SSH key is stored
 
 <aside>
-![Alt text](image2.png)
+![Alt text](configure_SSH.png)
 </aside>
 
 - Add the following details:
@@ -203,7 +203,7 @@ IdentityFile [Path to your private key]
 
 <aside>
 
-![Alt text](image1.png)
+![Alt text](externap_IP.png)
 
 </aside>
 
