@@ -105,7 +105,7 @@ In this step, you will create a new VM in your Google Cloud account.
 ![Alt text](google-cloud-vm-setup/Images/create_instance_position.png)
 
 </aside>
-
+### **4.2 Configure the VM**
 - Name: Give your VM a name.
 - Region and Zone: Select the location for your VM. The default ("us-central1-a") is usually the cheapest.
 - Machine Type: Choose a machine type based on your needs. For beginners, "e2-medium" (2 vCPUs, 4 GB memory) is a good starting point.
