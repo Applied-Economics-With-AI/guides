@@ -97,7 +97,8 @@ In this step, you will create a new VM in your Google Cloud account.
 
 ### **4.2 Create an Instance**
 
-- Choose Compute Engine from the ‘Quick Access’ menu in the home/landing page and then on "Create Instance" and configure the settings.
+- Choose Compute Engine from the ‘Quick Access’ menu in the home/landing page.
+-  Select "Create Instance" and configure the settings.
 
 <aside>
 
