@@ -32,7 +32,7 @@ There are at least three reasons to setup a virtual machine: (1) Flexibility, (2
 
 (1) Flexibility
 
-While it is very common for universities to have their own computational resources for working with big data, I have found that having my own server affords a great deal more flexibility.  The most obvious advantage is that I can turn the machine on and off as needed, and do not have to submit jobs to a schedule nor compete for resources with others.  The ability to work in real-time drastically increases productivity and avoids lengthy wait times which (for me) disrupt my work flow substantially.  Another way in which a virtual machine offers flexibility is in costs.  Apart from the cost of data storage, you will not pay for any computational resources when not using the machine (unlike personal hardware).  And if a project is going to be dormant for a while, you can download the data to a personal hard disk and shudder the virtual machine completely - at which point your costs become 0.
+While it is very common for universities to have their own computational resources for working with big data, I have found that having my own server affords a great deal more flexibility.  The most obvious advantage is that I can turn the machine on and off as needed, and do not have to submit jobs to a schedule nor compete for resources with others.  The ability to work in real-time drastically increases productivity and avoids lengthy wait times, which (for me) disrupt my workflow substantially.  Another way in which a virtual machine offers flexibility is in costs.  Apart from the cost of data storage, you will not pay for any computational resources when not using the machine (unlike personal hardware).  And if a project is going to be dormant for a while, you can download the data to a personal hard disk and shudder the virtual machine completely - at which point your costs become 0.
 
 (2) Scalability
 
@@ -85,8 +85,9 @@ In this step, you will create a new VM in your Google Cloud account.
 
 ### **4.1 Create a New Project**
 
-- Go to the Google Cloud Console (1)
-- Select ‘New Project’ (2)
+- Go to the Google Cloud Console
+- Select 'Select Project'
+- Then, on the subsequent window, select ‘New Project’ (2)
 
 <aside>
 
