@@ -186,7 +186,7 @@ With your SSH keys configured, you can now connect to the VM using VSCode.
 - Type "Remote-SSH: Connect to Host" and select it
 - Click "Configure SSH Hosts" and choose the file where your SSH key is stored
 
-<aside>
+
 ![Alt text](configuration_SSH.png)
 </aside>
 
