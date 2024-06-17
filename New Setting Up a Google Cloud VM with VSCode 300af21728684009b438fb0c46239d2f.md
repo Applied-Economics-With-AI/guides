@@ -68,7 +68,7 @@ In this step, you will create a new VM in your Google Cloud account.
 <aside>
 <img src="https://www.notion.so/icons/camera_gray.svg" alt="https://www.notion.so/icons/camera_gray.svg" width="40px" /> Refer to the screenshot below:
 
-![Alt text](Screenshot_2024-06-13_at_00.42.34.png)
+![Alt text](image5.png)
 
 </aside>
 
@@ -79,7 +79,7 @@ In this step, you will create a new VM in your Google Cloud account.
 <aside>
 <img src="https://www.notion.so/icons/camera_gray.svg" alt="https://www.notion.so/icons/camera_gray.svg" width="40px" /> Refer to the screenshot below:
 
-![Alt text](Screenshot_2024-06-13_at_00.33.36.png)
+![Alt text](image3.png)
 
 </aside>
 
