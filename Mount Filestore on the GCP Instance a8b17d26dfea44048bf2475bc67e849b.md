@@ -17,7 +17,7 @@ Navigate to [Google Cloud](https://cloud.google.com/) and log in with your Gmail
 
 <aside>
 
-![Untitled](image6.png)
+![Untitled](SSH_position.png)
 
 </aside>
 
@@ -56,7 +56,7 @@ Replace `/test-filestore` with the directory where you want to mount the Filesto
 <aside>
 
 
-![Untitled](image7.png)
+![Untitled](edit_position.png)
 
 </aside>
 
@@ -74,13 +74,12 @@ Replace `/test-filestore` with the directory where you want to mount the Filesto
     
 
 <aside>
-<img src="https://www.notion.so/icons/camera_gray.svg" alt="https://www.notion.so/icons/camera_gray.svg" width="40px" /> Example Startup script:
 
-![Untitled](image8.png)
+![Untitled](startup_script.png)
 
 </aside>
 
-- Replace `/tetest-filestore` with the directory where you want to mount the Filestore.
+- Replace `/test-filestore` with the directory where you want to mount the Filestore.
 - Replace `10.184.138.132` with the IP address of your Filestore.
 - Replace `/test_fs_vol` with the path to your Filestore volume.
 
@@ -150,9 +149,9 @@ If there are issues, check the startup script logs to diagnose the problem:
 - If you don't see the directory immediately, you may need to open the root directory (`/`) and navigate through the file system to find `/test-filestore`.
 
 <aside>
-<img src="https://www.notion.so/icons/camera_gray.svg" alt="https://www.notion.so/icons/camera_gray.svg" width="40px" />
 
-![Untitled](image9.png)
+
+![Untitled](navigate_files.png)
 
 </aside>
 
