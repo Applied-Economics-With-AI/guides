@@ -1,4 +1,4 @@
-# *New* Setting Up a Google Cloud VM with VSCode
+# Setting Up a Google Cloud VM with VSCode
 
 This guide will show you how to create a powerful remote development environment using a Google Cloud Virtual Machine (VM) and Visual Studio Code (VSCode). You'll be able to leverage the VM's resources – like additional processing power and memory – for your coding projects while working within your VSCode setup.
 
@@ -66,7 +66,6 @@ In this step, you will create a new VM in your Google Cloud account.
 - Select ‘New Project’ (2)
 
 <aside>
-<img src="https://www.notion.so/icons/camera_gray.svg" alt="https://www.notion.so/icons/camera_gray.svg" width="40px" /> Refer to the screenshot below:
 
 ![Alt text](image5.png)
 
@@ -77,7 +76,6 @@ In this step, you will create a new VM in your Google Cloud account.
 - Choose Compute Engine from the ‘Quick Access’ menu in the home/landing page and then on "Create Instance" and configure the settings.
 
 <aside>
-<img src="https://www.notion.so/icons/camera_gray.svg" alt="https://www.notion.so/icons/camera_gray.svg" width="40px" /> Refer to the screenshot below:
 
 ![Alt text](image3.png)
 
@@ -93,7 +91,7 @@ In this step, you will create a new VM in your Google Cloud account.
 You can reduce costs by selecting "Spot" instances under VM provisioning model, which are significantly cheaper. However, the VM can be temporarily shut down by Google when the instance is not in use or if there is higher demand for a particular period. In general, this could happen around once or twice a week but it depends on a case by case basis.
 
 <aside>
-<img src="https://www.notion.so/icons/camera_gray.svg" alt="https://www.notion.so/icons/camera_gray.svg" width="40px" /> Refer to the screenshot below:
+
 
 ![Alt text](image4.png)
 
