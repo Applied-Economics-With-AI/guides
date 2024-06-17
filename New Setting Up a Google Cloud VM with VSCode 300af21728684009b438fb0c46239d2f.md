@@ -187,8 +187,6 @@ With your SSH keys configured, you can now connect to the VM using VSCode.
 - Click "Configure SSH Hosts" and choose the file where your SSH key is stored
 
 <aside>
-<img src="https://www.notion.so/icons/camera_gray.svg" alt="https://www.notion.so/icons/camera_gray.svg" width="40px" /> For example:
-
 ![Alt text](image2.png)
 </aside>
 
@@ -204,7 +202,6 @@ IdentityFile [Path to your private key]
 - The External IP can be found by navigating to ‘Compute Engine’
 
 <aside>
-<img src="https://www.notion.so/icons/camera_gray.svg" alt="https://www.notion.so/icons/camera_gray.svg" width="40px" /> Refer to the screenshot below:
 
 ![Alt text](image1.png)
 
