@@ -1,6 +1,10 @@
 # Setting Up a Google Cloud VM with VSCode
 
-This guide will show you how to setup your own personal Cloud-based server for conducting applied economics research.  We will first confugure our Cloud-based server using the Google Cloud Virtual Machine (VM) and Visual Studio Code (VSCode). You'll be able to leverage the VM's resources – like additional processing power and memory – for your coding projects while working within your VSCode setup.
+This guide is aimed at helping researchers set up a virtual machine capable of running R and Python in the cloud using Google Cloud Platform (GCP).  It primarily documents first-hand experience setting up and using a virtual machine on the Google Cloud Platform (GCP).  Similar setups can be achieved with AWS and Microsoft Azure, though I have no experience with these platforms. This has been an invaluable tool for me since the beginning of my PhD, and has drastically increased my productivity across many projects.
+
+This guide is a mix of personal experience and tips with some more standard instructions on how to set up your own virtual work environment.  It is written with a view to aid applied economics researchers. I have borrowed from many sources, and tried my best to correctly attribute these.
+
+We will first confugure our Cloud-based server using the Google Cloud Virtual Machine (VM) and Visual Studio Code (VSCode). You'll be able to leverage the VM's resources – like additional processing power and memory – for your coding projects while working within your VSCode setup.
 
 This guide has been prepared by Peter John Lambert, Yannick Schindler, Suraj Rajesh, Yifan Wang, Juan Bautista Sosa, Tongmeng Xie, Pauline Butcher and Luca Barbato.
 
@@ -12,12 +16,27 @@ We welcome any questions or feedback, which you can leave here (link to "issues"
 
 We will cover the following steps to set up your local machine for remote development using a Google Cloud Virtual Machine (VM):
 
+- **Why do I need my own virtual machine?:** Pros anc cons
 - **Prepare Your Tools:** Install the essential VSCode extension for remote connections.
 - **Set Up Your Cloud Workspace:** Create your Google Cloud account and explore the free trial options.
 - **Launch Your Virtual Machine:** Choose the VM configuration that best suits your project needs.
 - **Secure Your Access:** Generate SSH keys to ensure a safe and private connection to your VM.
 - **Connect VSCode to the Cloud:** Link your code editor to your new virtual machine.
 - **Customize Your Environment:** Install the tools and software you need for your specific workflow.
+
+---
+
+# ** Why do I need my own virtual machine? A Pros and Cons **
+
+There are at least three reasons to setup a virtual machine: (1) Flexibility, (2) Scalability, (3) Productivity. Reasons not to setup are the technical barriers to entry (though this guide aims to offset this!) and cost.  On cost, I would argue that the relevant counterfactual would be purchasing a mid-range laptop (32GB of memory or higher) which will depreciate, puts an upper bound on the power available to you, and requires liquidity to purchase.
+
+(1) Flexibility
+
+While it is very common for universities to have their own computational resources for working with big data, I have found that having my own server affords a great deal more flexibility.  The most obvious advantage is that I can turn the machine on and off as needed, and do not have to submit jobs to a schedule nor compete for resources with others.  The ability to work in real-time drastically increases productivity and avoids lengthy wait times which (for me) disrupt my work flow substantially.  Another way in which a virtual machine offers flexibility is in costs.  Apart from the cost of data storage, you will not pay for any computational resources when not using the machine (unlike personal hardware).  And if a project is going to be dormant for a while, you can download the data to a personal hard disk and shudder the virtual machine completely - at which point your costs become 0.
+
+(2) Scalability
+
+The best feature of the Google Cloud
 
 ---
 
