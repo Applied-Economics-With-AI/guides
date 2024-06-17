@@ -1,6 +1,6 @@
 # Setting Up a Google Cloud VM with VSCode
 
-This guide will show you how to create a powerful remote development environment using a Google Cloud Virtual Machine (VM) and Visual Studio Code (VSCode). You'll be able to leverage the VM's resources – like additional processing power and memory – for your coding projects while working within your VSCode setup.
+This guide will show you how to setup your own personal Cloud-based server for conducting applied economics research.  We will first confugure our Cloud-based server using the Google Cloud Virtual Machine (VM) and Visual Studio Code (VSCode). You'll be able to leverage the VM's resources – like additional processing power and memory – for your coding projects while working within your VSCode setup.
 
 ---
 
