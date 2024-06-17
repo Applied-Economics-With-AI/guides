@@ -17,7 +17,7 @@ Navigate to [Google Cloud](https://cloud.google.com/) and log in with your Gmail
 
 <aside>
 
-![Untitled](SSH_position.png)
+![Alt text](GCVM_setup/images/SSH_position.png)
 
 </aside>
 
@@ -56,7 +56,7 @@ Replace `/test-filestore` with the directory where you want to mount the Filesto
 <aside>
 
 
-![Untitled](edit_position.png)
+![Alt text](GCVM_setup/images/edit_position.png)
 
 </aside>
 
@@ -75,7 +75,7 @@ Replace `/test-filestore` with the directory where you want to mount the Filesto
 
 <aside>
 
-![Untitled](startup_script.png)
+![Alt text](GCVM_setup/images/startup_script.png)
 
 </aside>
 
@@ -151,7 +151,7 @@ If there are issues, check the startup script logs to diagnose the problem:
 <aside>
 
 
-![Untitled](navigate_files.png)
+![Alt text](GCVM_setup/images/navigate_files.png)
 
 </aside>
 
