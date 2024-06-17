@@ -67,7 +67,7 @@ In this step, you will create a new VM in your Google Cloud account.
 
 <aside>
 
-![Alt text](new_project_position.png)
+![Alt text](create_new_project.png)
 
 </aside>
 
