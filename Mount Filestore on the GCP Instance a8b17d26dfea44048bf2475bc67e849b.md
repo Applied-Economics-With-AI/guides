@@ -54,7 +54,7 @@ Replace `/test-filestore` with the directory where you want to mount the Filesto
 - Select your instance and click **Edit**.
 
 <aside>
-<img src="https://www.notion.so/icons/camera_gray.svg" alt="https://www.notion.so/icons/camera_gray.svg" width="40px" /> Refer to the screenshot below:
+
 
 ![Untitled](image7.png)
 
