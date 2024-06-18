@@ -306,27 +306,68 @@ Now you are ready to use your VM for development.
     - Write and run your code as usual, now leveraging the resources of your remote VM.
 
 ---
-### **Step 9: Open an R Script in VSCode**
+## **Step 9: Open an R Script in VSCode**
+
 With VSCode configured and connected to your VM, you can start working with R scripts.
 
-### **9.1 Create a New R Script**
-- In VSCode, navigate to the "Explorer" tab on the left sidebar.
-- Click on the "New File" icon.
-- Name the file with an .R extension, for example, example_script.R.
-  
-### **9.2 Write and Run R Code**
+### **9.1 Getting Started**
 
-- Open the newly created R script file.
+1. **Install R**:
+   - Download and install R (version 3.4.0 or higher) for your platform from the [CRAN website](https://cran.r-project.org/).
+   - For Windows users: During installation, check the option "Save version number in registry" to allow the R extension in VSCode to automatically find the R executable.
 
-- Write your R code in the editor.
+2. **Install `languageserver` in R**:
+   - Open R and run the following command to install the `languageserver` package:
+     ```R
+     install.packages("languageserver")
+     ```
 
-Example:
-```markdown
-R
-Copy code
-print("Hello, R!")
+3. **Install R Extension for VSCode**:
+   - Open VSCode and go to the Extensions tab on the left sidebar.
+   - Search for "R" and install the extension provided by Yuki Ueda.
+
+### **9.2 Create a New R Script**
+
+1. In VSCode, navigate to the "Explorer" tab on the left sidebar.
+2. Click on the "New File" icon.
+3. Name the file with an `.R` extension, for example, `example_script.R`.
+
+### **9.3 Write and Run R Code**
+
+1. Open the newly created R script file.
+2. Write your R code in the editor.
+
+   Example:
+   ```r
+   print("Hello, R!")
 To run the code, highlight the lines you want to execute and press Ctrl + Enter. The output will appear in the terminal at the bottom of the VSCode window, using the configured Radian console.
 ```
+3. To run the code, highlight the lines you want to execute and press `Ctrl` + `Enter`. The output will appear in the terminal at the bottom of the VSCode window, using the configured Radian console.
+
+---
+
+## **Step 10: Open a Python Notebook in VSCode**
+
+VSCode also supports Jupyter notebooks, allowing you to work with Python in an interactive environment.
+
+### **10.1 Install Python and Jupyter**
+
+If not already installed, you need to install Python and Jupyter on your VM. Open a terminal in VSCode and run the following commands:
+
+```bash
+sudo apt-get update
+sudo apt-get install python3-pip
+pip3 install jupyter
+```
+
+### **10.2 Install Python Extension for VSCode**
+
+1. Go to the Extensions tab in VSCode.
+2. Search for "Python" and install the extension provided by Microsoft.
+
+### **10.3 Create a New Jupyter Notebook**
+
+
 ### **Step 10: Open a Python Notebook in VSCode**
 VSCode also supports Jupyter notebooks, allowing you to work with Python in an interactive environment.
 
@@ -346,7 +387,7 @@ Search for "Python" and install the extension provided by Microsoft.
 In VSCode, navigate to the "Explorer" tab.
 Click on the "New File" icon.
 Name the file with an .ipynb extension, for example, example_notebook.ipynb.
-### **10.4 Write and Run Python Code### **
+### **10.4 Write and Run Python Code**
 Open the newly created notebook file.
 
 Click on the + icon to create a new code cell.
