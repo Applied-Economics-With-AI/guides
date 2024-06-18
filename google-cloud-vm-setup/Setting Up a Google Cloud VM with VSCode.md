@@ -343,7 +343,7 @@ Restart VSCode to apply the new settings.
 
 ## **7.8: Install VSCode and Extensions**
 Visual Studio Code (VSCode) is a powerful code editor with numerous extensions for various programming languages. We install VSCode and essential extensions for Python, R, and other development tools.
-```json
+```bash
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
 sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
