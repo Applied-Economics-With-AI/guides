@@ -6,7 +6,7 @@ This guide is a mix of personal experience and tips with some more standard inst
 
 We will first confugure our Cloud-based server using the Google Cloud Virtual Machine (VM) and Visual Studio Code (VSCode). You'll be able to leverage the VM's resources – like additional processing power and memory – for your coding projects while working within your VSCode setup.
 
-This guide has been prepared by Peter John Lambert, Yannick Schindler, Suraj Rajesh, Yifan Wang, Juan Bautista Sosa, Tongmeng Xie, Pauline Butcher and Luca Barbato.
+This guide has been prepared by Peter John Lambert, Yannick Schindler, Suraj Rajesh, Yifan Wang, Juan Bautista Sosa, Tongmeng Xie, Pauline Butcher, Thiemo Fetzer, and Luca Barbato.
 
 We welcome any questions or feedback, which you can leave here (link to "issues" section of the guides repo).
 
