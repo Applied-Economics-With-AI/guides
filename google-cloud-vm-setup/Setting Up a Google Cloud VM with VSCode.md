@@ -316,15 +316,24 @@ Press ‘Ctrl + Shift + P’ to open the Command Palette.
 Type "Preferences: Open Remote Settings" and select it.
 In the settings.json file that opens, add the following configuration. Replace /usr/local/bin/radian with the path you found in the previous step:
 
-```json
+```bash
 {
-    "r.bracketedPaste": true,
-    "r.rterm.linux": "/usr/local/bin/radian",
-    "r.plot.useHttpgd": true
+  "r.bracketedPaste": true,
+  "r.rterm.linux": "/home/rsuraj02/.local/bin/radian",
+  "r.lsp.path": "/usr/bin/R",
+  "r.lsp.debug": true,
+  "r.lsp.diagnostics": true,
+  "r.rterm.option": [
+    "--no-save",
+    "--no-restore"
+  ],
+  "r.plot.useHttpgd": true,
+  "terminal.integrated.env.linux": {
+    "R_HOME": "/usr/lib/R"
+  }
 }
-This configuration does the following:
  ```
-
+This configuration does the following:
 r.bracketedPaste: Enables bracketed paste mode in the R console.
 r.rterm.linux: Specifies the path to the Radian executable.
 r.plot.useHttpgd: Uses the httpgd package for rendering plots.
