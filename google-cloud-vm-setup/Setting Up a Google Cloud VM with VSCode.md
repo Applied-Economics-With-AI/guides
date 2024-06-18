@@ -104,16 +104,16 @@ In this step, you will create a new VM in your Google Cloud account.
 
 ![Alt text](google-cloud-vm-setup/Images/create_instance_position.png)
 
-</aside>
-### **4.2 Configure the VM**
+
+### **4.3 Configure the VM**
 - Name: Give your VM a name.
 - Region and Zone: Select the location for your VM. The default ("us-central1-a") is usually the cheapest.
 - Machine Type: Choose a machine type based on your needs. For beginners, "e2-medium" (2 vCPUs, 4 GB memory) is a good starting point.
 - Boot Disk: Customize the boot disk based on your task requirements, this will be charged regardless of VM usage intensity.
 
-### **4.3 Selecting “Spot” instances**
+### **4.4 Selecting “Spot” instances**
 
-You can reduce costs by selecting "Spot" instances under VM provisioning model, which are significantly cheaper. However, the VM can be temporarily shut down by Google when the instance is not in use or if there is higher demand for a particular period. In general, this could happen around once or twice a week but it depends on a case by case basis.
+You can reduce costs by selecting "Spot" instances under the VM provisioning model, which are significantly cheaper. However, Google can temporarily shut down the VM when the instance is not in use or if there is higher demand for a particular period. In general, this could happen once or twice a week, but it depends on a case-by-case basis.
 
 <aside>
 
@@ -122,16 +122,16 @@ You can reduce costs by selecting "Spot" instances under VM provisioning model, 
 
 </aside>
 
-### **4.4 Additional Settings**
+### **4.5 Additional Settings**
 
 - In “Firewall”, enable options like "Allow HTTP traffic" and "Allow HTTPS traffic"
 - In "Management", enable "Deletion protection"
 
-### **4.5 Create the VM**
+### **4.6 Create the VM**
 
 - Click "Create" to start your VM. It will automatically start, and costs will begin to accrue
 
-### **4.6 Monitor Your Costs**
+### **4.7 Monitor Your Costs**
 
 - You can monitor your costs in the billing section of the navigation menu or the quick access menu
 
