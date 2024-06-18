@@ -232,8 +232,6 @@ IdentityFile [Path to your private key]
 
 </aside>
 
-Note that the external IP could change if you either reset the VM or it crashes, in which case you would have to reconfigure the setup to re-connect it.
-
 ### **6.2 Connect to the VM**
 
 - Press `Ctrl` + `Shift` + `P` and select "Remote-SSH: Connect to Host"
@@ -245,53 +243,178 @@ Note that the external IP could change if you either reset the VM or it crashes,
 ## **Step 7: Install Necessary Scripts and Tools on the VM**
 
 Once connected, you can install the necessary tools and scripts on your VM.
+##**7.1 Connect to the in-browser SSH.
+- Select the SSH button present when the VM is switched on in the 'Compute Engine' section of google cloud.  
+## **7.1: Update and Install Necessary Packages**
+First, we need to update the package list and install essential packages that are commonly required for software development and system operations. These packages include tools for handling software properties, package management, and development libraries.
+  ```R
+sudo apt-get update
+sudo apt-get install -y software-properties-common dirmngr ed gpg-agent \
+     less locales vim-tiny wget ca-certificates \
+     build-essential libcurl4-openssl-dev libssl-dev libxml2-dev
 
-### **7.1 Open a Terminal in VSCode and Run Setup Scripts**
+sudo apt update
+sudo apt upgrade
+  ```
+## **7.2: Add R Repositories and Install R**
+Next, we will add the Comprehensive R Archive Network (CRAN) repository to our sources list and import the public key to ensure secure package installation. We then install the R base package and its development tools, which are crucial for running R and building packages.
+  ```bash
+sudo sh -c 'echo "deb https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/" >> /etc/apt/sources.list'
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+sudo apt-get update
+sudo apt upgrade
+sudo apt-get install -y r-base r-base-dev
 
-Copy and paste the contents of the setup scripts [link placeholder] ( `setup_ubuntu22_script`) into the terminal and run them line by line.
+sudo apt-get install -y libfontconfig1-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev \
+    libpng-dev libtiff5-dev libjpeg-dev libcairo2-dev libudunits2-dev libpoppler-cpp-dev \
+    libgdal-dev cmake
 
-### **7.3 Configure Radian**
+sudo apt update
+sudo apt upgrade
+  ```
+## **7.3: Install Core R Packages**
+We then install essential R packages for data manipulation, visualization, and development, which are widely used in data science and will provide a solid foundation for your projects.
+ ```bash
+sudo Rscript -e "install.packages(c('tidyverse', 'dplyr', 'ggplot2', 'devtools', 'formatR', 'remotes', 'selectr', 'languageserver', 'rmarkdown', 'httpgd', 'data.table'), repos='http://cran.rstudio.com/')"
+ ```
+## **7.4: Install Additional R Packages**
+In addition to core packages, we install specific R packages that are useful for various data science tasks, including text processing, statistical modeling, and advanced plotting.
+ ```bash
+sudo Rscript -e "install.packages(c('fixest', 'devtools', 'janitor', 'lubridate', 'doParallel', 'tmaptools', 'rmarkdown', 'textclean', 'qdapRegex', 'quanteda', 'tokenizers', 'stringi', 'DescTools', 'readtext', 'rvest', 'xml2', 'DescTools', 'zoo', 'stargazer', 'readxl', 'ggplot2', 'scales', 'ggpubr', 'ggpmisc', 'egg', 'extrafont'), repos='http://cran.rstudio.com/')"
+ ```
+## **7.5: Install Python and pip**
+Python is a versatile programming language commonly used in data science. We install Python and pip, a package manager for Python, to facilitate the installation of Python packages.
+ ```bash
+sudo apt-get install -y python3 python3-pip
+ ```
+## **7.6: Install Radian**
+Radian is an enhanced R console that provides multiline editing and rich syntax highlighting. We install Radian to improve the R programming experience.
 
+ ```bash
+Copy code
+pip3 install -U radian
+
+#Ensure the path to Radian is included in the PATH environment variable
+echo $PATH
+nano ~/.bashrc
+#Add the following line to ~/.bashrc**
+export PATH=$PATH:/home/YOUR_USER_NAME/.local/bin
+source ~/.bashrc
+echo $PATH
+ ```
+## **7.7: Configure Radian**
 Radian is an enhanced R console for the R language. To configure it in your VSCode settings, first, you need to find where Radian is installed on your VM.
 
 Open the terminal and run the following command:
 
-```bash
+ ```bash
 whereis radian
-```
+ ```
+This command will display the path where Radian is installed. It might look something like /usr/local/bin/radian. Next, you need to add this path to your VSCode settings to make sure VSCode uses Radian as the R console.
 
-- This command will display the path where Radian is installed. It might look something like /usr/local/bin/radian.
-
-Next, you need to add this path to your VSCode settings to make sure VSCode uses Radian as the R console.
-
-- Press ‘Ctrl + Shift + P’ to open the Command Palette.
-- Type "Preferences: Open Remote Settings" and select it.
-
+Press ‘Ctrl + Shift + P’ to open the Command Palette.
+Type "Preferences: Open Remote Settings" and select it.
 In the settings.json file that opens, add the following configuration. Replace /usr/local/bin/radian with the path you found in the previous step:
 
-```markdown
+```json
 {
-"r.bracketedPaste": true,
-"r.rterm.linux": "/usr/local/bin/radian",
-"r.plot.useHttpgd": true
+    "r.bracketedPaste": true,
+    "r.rterm.linux": "/usr/local/bin/radian",
+    "r.plot.useHttpgd": true
 }
-```
-
 This configuration does the following:
+ ```
 
-- r.bracketedPaste: Enables bracketed paste mode in the R console.
-- r.rterm.linux: Specifies the path to the Radian executable.
-- r.plot.useHttpgd: Uses the httpgd package for rendering plots.
+r.bracketedPaste: Enables bracketed paste mode in the R console.
+r.rterm.linux: Specifies the path to the Radian executable.
+r.plot.useHttpgd: Uses the httpgd package for rendering plots.
+Step 6b: Saving Settings
+Save the changes to the settings.json file.
+Restart VSCode to apply the new settings.
 
-### 7.4 Saving Settings
+## **7.8: Install VSCode and Extensions**
+Visual Studio Code (VSCode) is a powerful code editor with numerous extensions for various programming languages. We install VSCode and essential extensions for Python, R, and other development tools.
+```json
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
+sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+rm -f packages.microsoft.gpg
 
-- Save the changes to the settings.json file
-- Restart VSCode to apply the new settings
+sudo apt-get install apt-transport-https
+sudo apt-get update
+sudo apt-get install code # or code-insiders
 
-With these steps, Radian should now be properly configured in VSCode, providing an enhanced R console experience on your remote VM.
+# Install VSCode extensions
+code --install-extension mechatroner.rainbow-csv
+code --install-extension ms-python.python
+code --install-extension ms-toolsai.jupyter
+code --install-extension ms-vscode.cpptools
+code --install-extension github.copilot
+code --install-extension GitHub.copilot-chat
+code --install-extension REditorSupport.r
+code --install-extension ms-python.vscode-pylance
+code --install-extension eamodio.gitlens
+code --install-extension vscodevim.vim
+code --install-extension RDebugger.r-debugger
+```
+## **7.9: Set Default Locale**
+```bash
+Setting the default locale ensures that your system uses the correct language and regional settings, which can prevent issues with software that relies on locale settings.
+sudo locale-gen en_US.UTF-8
+sudo update-locale LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+```
+## **7.10: Install Additional R Packages from GitHub**
+Install additional R packages directly from GitHub for specialized functionalities.
+```bash
+devtools::install_github("trinker/textclean")
+devtools::install_github('Mikata-Project/ggthemr')
+extrafont::font_import()
+extrafont::loadfonts(device="postscript")
+extrafont::fonts()
+```
+## **7.11: Attach Persistent Disk**
+If you need additional storage, attach a persistent disk. Be cautious not to format an existing disk if it contains important data.
+```bash
+# Get the device name
+ls -l /dev/disk/by-id/google-*
 
+# Create a folder and mount the disk
+sudo mkdir -p /mnt/disks/pdisk
+sudo mount -o discard,defaults /dev/nvme0n2 /mnt/disks/pdisk
+
+# Make the disk read/writable
+sudo chmod a+w /mnt/disks/pdisk
+
+# Edit the fstab file to mount the disk on boot
+sudo blkid /dev/nvme0n2
+sudo vim /etc/fstab
+# Add this line to /etc/fstab
+UUID=e73634e9-81bd-459d-9286-0af3273150c1 /mnt/disks/pdisk ext4 discard,defaults,nofail 0 2
+cat /etc/fstab
+```
+## **7.12: Install Anaconda with Mamba Compiler**
+Anaconda is a popular Python distribution for data science. We install it along with Mamba, a faster package manager, to manage your Python environments and packages efficiently.
+```bash
+# Get the device name
+ls -l /dev/disk/by-id/google-*
+
+# Create a folder and mount the disk
+sudo mkdir -p /mnt/disks/pdisk
+sudo mount -o discard,defaults /dev/nvme0n2 /mnt/disks/pdisk
+
+# Make the disk read/writable
+sudo chmod a+w /mnt/disks/pdisk
+
+# Edit the fstab file to mount the disk on boot
+sudo blkid /dev/nvme0n2
+sudo vim /etc/fstab
+# Add this line to /etc/fstab
+UUID=e73634e9-81bd-459d-9286-0af3273150c1 /mnt/disks/pdisk ext4 discard,defaults,nofail 0 2
+cat /etc/fstab
+```
 ---
-
 ## **Step 8: Final Steps and Usage**
 
 Now you are ready to use your VM for development.
@@ -310,39 +433,35 @@ Now you are ready to use your VM for development.
 
 With VSCode configured and connected to your VM, you can start working with R scripts.
 
-### **9.1 Getting Started**
 
-1. **Install R**:
+### **9.1 Install R**:**
    - Download and install R (version 3.4.0 or higher) for your platform from the [CRAN website](https://cran.r-project.org/).
    - For Windows users: During installation, check the option "Save version number in registry" to allow the R extension in VSCode to automatically find the R executable.
 
-2. **Install `languageserver` in R**:
-   - Open R and run the following command to install the `languageserver` package:
+### **9.2 Install `languageserver` in R**:
+   - Open R and run the following command to install the `languageserver` package to enhance the coding interface:
      ```R
      install.packages("languageserver")
      ```
+   - Choose the mirror closest to your location
 
-3. **Install R Extension for VSCode**:
+### **9.3 Install R Extension for VSCode**:
    - Open VSCode and go to the Extensions tab on the left sidebar.
    - Search for "R" and install the extension provided by Yuki Ueda.
 
-### **9.2 Create a New R Script**
+### **9.4 Create a New R Script**
 
-1. In VSCode, navigate to the "Explorer" tab on the left sidebar.
-2. Click on the "New File" icon.
-3. Name the file with an `.R` extension, for example, `example_script.R`.
+- In VSCode, click on "File" and then the "New File" as shown below
+- Click on R document, an R Document (.R) is a basic script for running R code. 
 
-### **9.3 Write and Run R Code**
-
-1. Open the newly created R script file.
-2. Write your R code in the editor.
+### **9.5 Write and Run R Code**
+- Write your R code in the document or markdown.
 
    Example:
    ```r
    print("Hello, R!")
-To run the code, highlight the lines you want to execute and press Ctrl + Enter. The output will appear in the terminal at the bottom of the VSCode window, using the configured Radian console.
-   ```
-3. To run the code, highlight the lines you want to execute and press `Ctrl` + `Enter`. The output will appear in the terminal at the bottom of the VSCode window, using the configured Radian console.
+    ```
+- To run the code, highlight the lines you want to execute and press `Ctrl` + `Enter`. The output will appear in the terminal at the bottom of the VSCode window using the configured Radian console.
 
 ---
 
@@ -352,45 +471,39 @@ VSCode also supports Jupyter notebooks, allowing you to work with Python in an i
 
 ### **10.1 Install Python and Jupyter**
 
-If not already installed, you need to install Python and Jupyter on your VM. Open a terminal in VSCode and run the following commands:
+If not already installed, you need to install Python and Jupyter on your VM. Open a terminal in VSCode and run the following command:
 
 ```bash
-sudo apt-get update
-sudo apt-get install python3-pip
 pip3 install jupyter
 ```
 
 ### **10.2 Install Python Extension for VSCode**
 
-1. Go to the Extensions tab in VSCode.
-2. Search for "Python" and install the extension provided by Microsoft.
+- Go to the Extensions tab in VSCode.
+- Search for "Python" and install the extension provided by Microsoft.
 
 ### **10.3 Create a New Jupyter Notebook**
 
 
 ### **Step 10: Open a Python Notebook in VSCode**
-VSCode also supports Jupyter notebooks, allowing you to work with Python in an interactive environment.
+- VSCode also supports Jupyter notebooks, allowing you to work with Python in an interactive environment. Python is already installed through the setup script. To use Python through jupyter notebook in VScode 
 
-### **10.1 Install Python and Jupyter**
-If not already installed, you need to install Python and Jupyter on your VM. Open a terminal in VSCode and run the following commands:
+### **10.1 Install Extensions for VSCode**
+- Go to the Extensions tab in VSCode.
+- Search for "Python" and install the extension provided by Microsoft.
+- Search for "Jupyter" and install the extension provided by Microsoft.
+### **10.2 Create a New Jupyter Notebook**
+- In VSCode, navigate to the "Explorer" tab.
+- Click on the "New File" icon.
+- Click on Jupyter to use Python in a Jupyter notebook. Name the file with a .ipynb extension, for example, example_notebook.ipynb.
 
-```markdown
-sudo apt-get update
-sudo apt-get install python3-pip
-pip3 install jupyter
-```
+### **10.3 Kernel Selection**
+Before running any code, ensure that the notebook is using the correct Python kernel. View the top right button as indicated below; if the kernel isn't installed, then select it to choose the Python interpreter installed on your VM.
 
-### **10.2 Install Python Extension for VSCode**
-Go to the Extensions tab in VSCode.
-Search for "Python" and install the extension provided by Microsoft.
-### **10.3 Create a New Jupyter Notebook**
-In VSCode, navigate to the "Explorer" tab.
-Click on the "New File" icon.
-Name the file with an .ipynb extension, for example, example_notebook.ipynb.
 ### **10.4 Write and Run Python Code**
-Open the newly created notebook file.
+- Open the newly created notebook file.
 
-Click on the + icon to create a new code cell.
+- Click on the '+ Code' icon to create a new code cell. Click on '+ Markdown' to add a markdown to type in plain text comments, which are useful for writing reports. Refer to https://jupyter.brynmawr.edu/services/public/dblank/Jupyter%20Notebook%20Users%20Manual.ipynb for further guidance in using Jupyter Notebook. 
 
 Write your Python code in the cell.
 
@@ -401,10 +514,6 @@ Copy code
 print("Hello, Python!")
 ```
 Click the run icon next to the cell or press Shift + Enter to execute the code. The output will appear directly below the cell.
-
-### **10.5 Kernel Selection**
-Ensure that the notebook is using the correct Python kernel. If prompted, select the Python interpreter installed on your VM.
-You have successfully set up your local machine to interact with a Google Cloud VM using VSCode. You can now take advantage of the VM's resources for your development tasks.
 
 This guide should help you navigate the setup process. If you have any questions, reach out to
 
