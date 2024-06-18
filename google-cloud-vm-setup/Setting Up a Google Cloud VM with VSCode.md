@@ -16,7 +16,7 @@ We welcome any questions or feedback, which you can leave here (link to "issues"
 
 We will cover the following steps to set up your local machine for remote development using a Google Cloud Virtual Machine (VM):
 
-- **Why do I need my own virtual machine?:** Pros anc cons
+- **Why do I need my own virtual machine?:** Pros and cons
 - **Prepare Your Tools:** Install the essential VSCode extension for remote connections.
 - **Set Up Your Cloud Workspace:** Create your Google Cloud account and explore the free trial options.
 - **Launch Your Virtual Machine:** Choose the VM configuration that best suits your project needs.
@@ -306,7 +306,63 @@ Now you are ready to use your VM for development.
     - Write and run your code as usual, now leveraging the resources of your remote VM.
 
 ---
+### **Step 9: Open an R Script in VSCode**
+With VSCode configured and connected to your VM, you can start working with R scripts.
 
+### **9.1 Create a New R Script**
+- In VSCode, navigate to the "Explorer" tab on the left sidebar.
+- Click on the "New File" icon.
+- Name the file with an .R extension, for example, example_script.R.
+  
+### **9.2 Write and Run R Code**
+
+- Open the newly created R script file.
+
+- Write your R code in the editor.
+
+Example:
+```markdown
+R
+Copy code
+print("Hello, R!")
+To run the code, highlight the lines you want to execute and press Ctrl + Enter. The output will appear in the terminal at the bottom of the VSCode window, using the configured Radian console.
+```
+### **Step 10: Open a Python Notebook in VSCode**
+VSCode also supports Jupyter notebooks, allowing you to work with Python in an interactive environment.
+
+### **10.1 Install Python and Jupyter**
+If not already installed, you need to install Python and Jupyter on your VM. Open a terminal in VSCode and run the following commands:
+
+```markdown
+sudo apt-get update
+sudo apt-get install python3-pip
+pip3 install jupyter
+```
+
+### **10.2 Install Python Extension for VSCode**
+Go to the Extensions tab in VSCode.
+Search for "Python" and install the extension provided by Microsoft.
+### **10.3 Create a New Jupyter Notebook**
+In VSCode, navigate to the "Explorer" tab.
+Click on the "New File" icon.
+Name the file with an .ipynb extension, for example, example_notebook.ipynb.
+### **10.4 Write and Run Python Code### **
+Open the newly created notebook file.
+
+Click on the + icon to create a new code cell.
+
+Write your Python code in the cell.
+
+Example:
+```markdown
+python
+Copy code
+print("Hello, Python!")
+```
+Click the run icon next to the cell or press Shift + Enter to execute the code. The output will appear directly below the cell.
+
+### **10.5 Kernel Selection**
+Ensure that the notebook is using the correct Python kernel. If prompted, select the Python interpreter installed on your VM.
 You have successfully set up your local machine to interact with a Google Cloud VM using VSCode. You can now take advantage of the VM's resources for your development tasks.
 
 This guide should help you navigate the setup process. If you have any questions, reach out to
