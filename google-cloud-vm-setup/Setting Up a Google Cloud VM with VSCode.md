@@ -578,7 +578,7 @@ Every time the instance is started, the public IP is modified, requiring modific
 
 ### **13.3 Using GitHub Copilot**
 
-For detailed instructions and tips on how to use GitHub Copilot effectively in VScode, refer to [GitHub Copilot documentation](https://docs.github.com/en/copilot/getting-started-with-github-copilot](https://code.visualstudio.com/docs/copilot/overview).
+For detailed instructions and tips on how to use GitHub Copilot effectively in VScode, refer to [GitHub Copilot documentation](https://code.visualstudio.com/docs/copilot/overview).
 
 ---
 This guide should help you navigate the setup process. If you have any questions, reach out to
