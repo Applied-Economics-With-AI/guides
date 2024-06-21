@@ -16,13 +16,48 @@ We welcome any questions or feedback, which you can leave here (link to "issues"
 
 We will cover the following steps to set up your local machine for remote development using a Google Cloud Virtual Machine (VM):
 
-- **Why do I need my own virtual machine?:** Pros and cons
-- **Prepare Your Tools:** Install the essential VSCode extension for remote connections.
-- **Set Up Your Cloud Workspace:** Create your Google Cloud account and explore the free trial options.
-- **Launch Your Virtual Machine:** Choose the VM configuration that best suits your project needs.
-- **Secure Your Access:** Generate SSH keys to ensure a safe and private connection to your VM.
-- **Connect VSCode to the Cloud:** Link your code editor to your new virtual machine.
-- **Customize Your Environment:** Install the tools and software you need for your specific workflow.
+- [Why do I need my own virtual machine? A Pros and Cons](#why-do-i-need-my-own-virtual-machine-a-pros-and-cons)
+  - Understand the advantages and costs of using a virtual machine, helping you decide if it's the right solution for your needs.
+
+- [Step 1: Install and Configure VSCode](#step-1-install-and-configure-vscode)
+  - Set up Visual Studio Code, a powerful code editor that supports remote development.
+
+- [Step 2: Create a Google Account](#step-2-create-a-google-account)
+  - Create a Google account, which is necessary for accessing Google Cloud services.
+
+- [Step 3: Set up a Google Cloud Account](#step-3-set-up-a-google-cloud-account)
+  - Configure your Google Cloud account and start using VM instances.
+
+- [Step 4: Create a Virtual Machine (VM)](#step-4-create-a-virtual-machine-vm)
+  - Create and configure a new virtual machine on Google Cloud, including specific recommendations on the configuration of the VM.
+
+- [Step 5: Generate and Configure SSH Keys](#step-5-generate-and-configure-ssh-keys)
+  - Generate SSH key pairs and configure them to securely connect to your virtual machine from VSCode.
+
+- [Step 6: Connect to the VM Using VSCode](#step-6-connect-to-the-vm-using-vscode)
+  - Connect your local VSCode setup to the virtual machine, enabling remote development.
+
+- [Step 7: Install Necessary Scripts and Tools on the VM](#step-7-install-necessary-scripts-and-tools-on-the-vm)
+  - Install essential scripts and tools on your virtual machine, ensuring it's ready for development tasks.
+
+- [Step 8: Final Steps and Usage](#step-8-final-steps-and-usage)
+  - Complete final configuration steps and get practical tips for effectively using your virtual machine for development projects.
+
+- [Step 9: Open an R Script in VSCode](#step-9-open-an-r-script-in-vscode)
+  - Create and run R scripts in VSCode, leveraging the power of the virtual machine.
+
+- [Step 10: Open a Python Notebook in VSCode](#step-10-open-a-python-notebook-in-vscode)
+  - Create and run Python notebooks in VSCode, allowing interactive development on the virtual machine.
+
+- [Step 11: Starting and Stopping the VM](#step-11-starting-and-stopping-the-vm)
+  - Manage the start and stop operations of your virtual machine.
+
+- [Step 12: Create a Static IP Address](#step-12-create-a-static-ip-address)
+  - Assign a static IP address to your virtual machine to avoid reconfiguration issues when the machine restarts.
+
+- [Step 13: Installing GitHub Copilot](#step-13-installing-github-copilot)
+  - Set up GitHub Copilot in VSCode to enhance your programming experience.
+
 
 ---
 
