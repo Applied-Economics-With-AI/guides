@@ -16,7 +16,7 @@ We welcome any questions or feedback, which you can leave here (link to "issues"
 
 We will cover the following steps to set up your local machine for remote development using a Google Cloud Virtual Machine (VM):
 
-- [Why do I need my own virtual machine? A Pros and Cons](#why-do-i-need-my-own-virtual-machine-a-pros-and-cons-(TBC))
+- [Why do I need my own virtual machine? A Pros and Cons](#why-do-i-need-my-own-virtual-machine-a-pros-and-cons-tbc)
   - Understand the advantages and costs of using a virtual machine, helping you decide if it's the right solution for your needs.
 
 - [Step 1: Install and Configure VSCode](#step-1-install-and-configure-vscode)
