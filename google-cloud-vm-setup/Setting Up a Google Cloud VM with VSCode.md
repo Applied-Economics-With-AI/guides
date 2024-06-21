@@ -545,16 +545,11 @@ Click the run icon next to the cell or press Shift + Enter to execute the code. 
    - In the left-hand menu, click on "Compute Engine" and then "VM instances".
    - Find your VM in the list and click the "Stop" button.
 
-### **12 Create a Static IP Address**
+## **Step 12: Create a Static IP Address**
 
 Every time the instance is started, the public IP is modified, requiring modifications to the "SSH configuration" setting in your VScode.  To avoid this, you can assign a static IP address.
 
-**12.1 Reserve a Static IP**:
-   - In the left-hand menu, go to "VPC network" and then "IP addresses".
-   - Click "Reserve a static address".
-   - Choose a name for the address, select the region, and click "Reserve".
-
-**12.1 Assign the Static IP to Your VM**:
+### **12.1 Assign the Static IP to Your VM**:
    - Go to "Compute Engine"
    - Click on your VM instance name.
    - Click "Edit".
