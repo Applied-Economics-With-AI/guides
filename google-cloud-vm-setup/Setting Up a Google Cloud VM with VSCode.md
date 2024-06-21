@@ -250,7 +250,7 @@ With your SSH keys configured, you can now connect to the VM using VSCode.
 
 ### **6.1 Configure SSH in VSCode**
 
-- Press Ctr + Shift + P to open the Command Palette
+- Press `Ctrl + Shift + P` (Windows) or `Cmd + Shift + P` (Mac) to open the Command Palette
 - Type "Remote-SSH: Connect to Host" and select it
 - Click "Configure SSH Hosts" and choose the file where your SSH key is stored
 
@@ -277,7 +277,7 @@ IdentityFile [Path to your private key]
 
 ### **6.2 Connect to the VM**
 
-- Press `Ctrl` + `Shift` + `P` and select "Remote-SSH: Connect to Host"
+- Press `Ctrl + Shift + P` (Windows) or `Cmd + Shift + P` (Mac) and select "Remote-SSH: Connect to Host"
 - Choose the configured host
 - Select "Linux" as the system type and continue (may not be required to choose system type in Mac)
 
@@ -287,7 +287,8 @@ IdentityFile [Path to your private key]
 
 Once connected, you can install the necessary tools and scripts on your VM.
 ##**7.1 Connect to the in-browser SSH.
-- Select the SSH button present when the VM is switched on in the 'Compute Engine' section of google cloud.  
+- Select the SSH button present when the VM is switched on in the 'Compute Engine' section of google cloud.
+   
 ## **7.1: Update and Install Necessary Packages**
 First, we need to update the package list and install essential packages that are commonly required for software development and system operations. These packages include tools for handling software properties, package management, and development libraries.
   ```R
@@ -355,9 +356,9 @@ whereis radian
  ```
 This command will display the path where Radian is installed. It might look something like /usr/local/bin/radian. Next, you need to add this path to your VSCode settings to make sure VSCode uses Radian as the R console.
 
-Press ‘Ctrl + Shift + P’ to open the Command Palette.
-Type "Preferences: Open Remote Settings" and select it.
-In the settings.json file that opens, add the following configuration. Replace /usr/local/bin/radian with the path you found in the previous step:
+- Press Ctrl + Shift + P (Windows) or Cmd + Shift + P (Mac) to open the Command Palette.
+- Type "Preferences: Open Remote Settings" and select it.
+- In the settings.json file that opens, add the following configuration. Replace /usr/local/bin/radian with the path you found in the previous step:
 
 ```bash
 {
@@ -513,7 +514,7 @@ With VSCode configured and connected to your VM, you can start working with R sc
    ```r
    print("Hello, R!")
     ```
-- To run the code, highlight the lines you want to execute and press `Ctrl` + `Enter`. The output will appear in the terminal at the bottom of the VSCode window using the configured Radian console.
+- To run the code, highlight the lines you want to execute and press Ctrl + Enter (Windows) or Cmd + Enter (Mac). The output will appear in the terminal at the bottom of the VSCode window using the configured Radian console.
 
 ---
 
@@ -565,7 +566,7 @@ python
 Copy code
 print("Hello, Python!")
 ```
-Click the run icon next to the cell or press Shift + Enter to execute the code. The output will appear directly below the cell.
+Click the run icon next to the cell or press Shift + Enter (Windows and Mac) to execute the code. The output will appear directly below the cell.
 
 ## **Step 11: Starting and Stopping the VM**
 
