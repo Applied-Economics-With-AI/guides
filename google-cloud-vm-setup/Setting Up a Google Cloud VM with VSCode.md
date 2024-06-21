@@ -514,7 +514,7 @@ With VSCode configured and connected to your VM, you can start working with R sc
    ```r
    print("Hello, R!")
     ```
-- To run the code, highlight the lines you want to execute and press Ctrl + Enter (Windows) or Cmd + Enter (Mac). The output will appear in the terminal at the bottom of the VSCode window using the configured Radian console.
+- To run the code, highlight the lines you want to execute and press `Ctrl + Enter` (Windows) or `Cmd + Enter` (Mac). The output will appear in the terminal at the bottom of the VSCode window using the configured Radian console.
 
 ---
 
