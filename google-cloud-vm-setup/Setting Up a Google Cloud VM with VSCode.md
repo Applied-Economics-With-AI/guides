@@ -62,7 +62,7 @@ To use Google Cloud services, you need a Google account. If you don't already ha
 
 ---
 
-## **Step 3: Set-up a Google Cloud Account**
+## **Step 3: Set up a Google Cloud Account**
 
 Now that you have a Google account, you can set up your Google Cloud account to start using VM instances.
 
@@ -545,17 +545,17 @@ Click the run icon next to the cell or press Shift + Enter to execute the code. 
    - In the left-hand menu, click on "Compute Engine" and then "VM instances".
    - Find your VM in the list and click the "Stop" button.
 
-### **11.3 Static IP Address**
+### **12 Create a Static IP Address**
 
-To avoid having to reconfigure the IP address every time you start your VM, you can assign a static IP address.
+Every time the instance is started, the public IP is modified, requiring modifications to the "SSH configuration" setting in your VScode.  To avoid this, you can assign a static IP address.
 
-**11.3.1 Reserve a Static IP**:
-   - In the left-hand menu, go to "VPC network" and then "External IP addresses".
+**12.1 Reserve a Static IP**:
+   - In the left-hand menu, go to "VPC network" and then "IP addresses".
    - Click "Reserve a static address".
    - Choose a name for the address, select the region, and click "Reserve".
 
-**11.3.2 Assign the Static IP to Your VM**:
-   - Go to "Compute Engine" > "VM instances".
+**12.1 Assign the Static IP to Your VM**:
+   - Go to "Compute Engine"
    - Click on your VM instance name.
    - Click "Edit".
    - Under "Network interfaces", click "External IP" and select the static IP you reserved.
@@ -563,23 +563,22 @@ To avoid having to reconfigure the IP address every time you start your VM, you 
 
 ---
 
-## **Step 12: Installing GitHub Copilot**
+## **Step 13: Installing GitHub Copilot**
 
-### **12.1 Installing GitHub Copilot in VSCode**
+### **13.1 Installing GitHub Copilot in VSCode**
    - Open your Visual Studio Code editor.
    - Click on the Extensions tab on the left sidebar.
    - Type "GitHub Copilot" in the search bar and press Enter.
    - Click the "Install" button next to the GitHub Copilot extension.
 
-### **12.2 Using GitHub Copilot**
+### **13.2 Enable GitHub Copilot in VSCode**
+   - Once installed, you will be prompted to sign in to your GitHub account. Follow the on-screen instructions to complete the authentication process (**).
+   - Click on the icon shown below
+   - Open any file or start a new one (see steps 9 and 10). GitHub Copilot will start providing code suggestions as you type.
 
-For detailed instructions and tips on how to use GitHub Copilot effectively, refer to [GitHub Copilot documentation](https://docs.github.com/en/copilot/getting-started-with-github-copilot).
+### **13.3 Using GitHub Copilot**
 
-### **12.3 Enable GitHub Copilot in VSCode**
-   - Once installed, you will be prompted to sign in to your GitHub account. Follow the on-screen instructions to complete the authentication process.
-   - Open any file or start a new one.
-   - GitHub Copilot will start providing code suggestions as you type.
-
+For detailed instructions and tips on how to use GitHub Copilot effectively in VScode, refer to [GitHub Copilot documentation](https://docs.github.com/en/copilot/getting-started-with-github-copilot](https://code.visualstudio.com/docs/copilot/overview).
 ---
 This guide should help you navigate the setup process. If you have any questions, reach out to
 
