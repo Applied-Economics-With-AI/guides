@@ -61,7 +61,7 @@ We will cover the following steps to set up your local machine for remote develo
 
 ---
 
-## **Why do I need my own virtual machine? A Pros and Cons (TBC) **
+## **Why do I need my own virtual machine? A Pros and Cons (TBC)**
 
 There are at least three reasons to setup a virtual machine: (1) Flexibility, (2) Scalability, (3) Productivity. Reasons not to setup are the technical barriers to entry (though this guide aims to offset this!) and cost.  On cost, I would argue that the relevant counterfactual would be purchasing a mid-range laptop (32GB of memory or higher) which will depreciate, puts an upper bound on the power available to you, and requires liquidity to purchase.
 
