@@ -356,7 +356,7 @@ whereis radian
  ```
 This command will display the path where Radian is installed. It might look something like /usr/local/bin/radian. Next, you need to add this path to your VSCode settings to make sure VSCode uses Radian as the R console.
 
-- Press Ctrl + Shift + P (Windows) or Cmd + Shift + P (Mac) to open the Command Palette.
+- Press `Ctrl + Shift + P` (Windows) or `Cmd + Shift + P` (Mac) to open the Command Palette.
 - Type "Preferences: Open Remote Settings" and select it.
 - In the settings.json file that opens, add the following configuration. Replace /usr/local/bin/radian with the path you found in the previous step:
 
@@ -381,7 +381,7 @@ This configuration does the following:
 r.bracketedPaste: Enables bracketed paste mode in the R console.
 r.rterm.linux: Specifies the path to the Radian executable.
 r.plot.useHttpgd: Uses the httpgd package for rendering plots.
-Step 6b: Saving Settings
+Step 7.7.1: Saving Settings
 Save the changes to the settings.json file.
 Restart VSCode to apply the new settings.
 
@@ -566,7 +566,7 @@ python
 Copy code
 print("Hello, Python!")
 ```
-Click the run icon next to the cell or press Shift + Enter (Windows and Mac) to execute the code. The output will appear directly below the cell.
+Click the run icon next to the cell or press `Shift + Enter` (Windows and Mac) to execute the code. The output will appear directly below the cell.
 
 ## **Step 11: Starting and Stopping the VM**
 
