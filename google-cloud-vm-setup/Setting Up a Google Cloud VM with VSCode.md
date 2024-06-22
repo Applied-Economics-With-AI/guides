@@ -610,7 +610,7 @@ With VSCode configured and connected to your VM, you can start working with R sc
 
 - Also, if radian is configured correctly, you should be able to view `r$>` in the command line of the terminal
    
-<img width="900" alt="step_8 5 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/5e5d8453-bda3-4597-a30e-bbd33a5231aa">
+  <img width="900" alt="step_8 5 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/5e5d8453-bda3-4597-a30e-bbd33a5231aa">
 
 ---
 
@@ -658,9 +658,9 @@ python
 Copy code
 print("Hello, Python!")
 ```
-Click the run icon next to the cell or press `Shift + Enter` (Windows and Mac) to execute the code. The output will appear directly below the cell.
+- Click the run icon next to the cell or press `Shift + Enter` (Windows and Mac) to execute the code. The output will appear directly below the cell.
 
-<img width="900" alt="step_9 4" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/dea16e4f-e261-4dd8-a4e3-efd15276513e">
+  <img width="900" alt="step_9 4" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/dea16e4f-e261-4dd8-a4e3-efd15276513e">
 
 ---
 
