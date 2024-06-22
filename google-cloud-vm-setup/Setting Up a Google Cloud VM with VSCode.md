@@ -153,6 +153,7 @@ In this step, you will create a new VM in your Google Cloud account.
 
 
 ### **4.3 Configure the VM**
+
 ### **4.3.1 General Configuration**
 
 - Name: Give your VM a name.
@@ -633,6 +634,7 @@ Click the run icon next to the cell or press `Shift + Enter` (Windows and Mac) t
 
 <img width="900" alt="step_9 4" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/dea16e4f-e261-4dd8-a4e3-efd15276513e">
 
+---
 
 ## **Step 10: Starting and Stopping the VM**
 
@@ -657,6 +659,8 @@ Click the run icon next to the cell or press `Shift + Enter` (Windows and Mac) t
    - Find your VM in the list and click the "Stop" button.
      
      <img width="900" alt="step_10 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/72efaabc-ad10-4945-8933-68ed8be455ee">
+
+---
 
 ## **Step 11: Create a Static IP Address**
 
