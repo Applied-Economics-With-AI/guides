@@ -217,8 +217,17 @@ Here the username is simply your google account username with no dots or dots re
 ```bash
 ssh-keygen -t rsa -f C:\Users\wyf19\.ssh\google_cloud_key2 -C wyf1997203lse -b 2048
 ```
+Then the output would look like:
 
-Locate the generated keys. The file ending in `.pub` is the public key, and the other file is the private key. Open the public key file with a text editor and copy its contents.
+![step_5 1 a 1](https://github.com/Applied-Economics-With-AI/guides/assets/172032819/2f05128f-541f-4c1d-8076-becf0f0bde22)
+
+Locate the generated keys. The file ending in `.pub` is the public key, and the other file is the private key. 
+
+![step_5 1 a 2](https://github.com/Applied-Economics-With-AI/guides/assets/172032819/2492a970-b5b4-4cee-b4f5-5d90769a96d2)
+
+Open the public key file with a text editor and copy its contents.
+
+![step_5 1 a 3](https://github.com/Applied-Economics-With-AI/guides/assets/172032819/8ece9e59-d1d2-4cb8-97bd-88c6d6e28419)
 
 ### **5.1.b Generate SSH Keys (Mac)**
 
@@ -227,6 +236,8 @@ Creating an SSH key on a Mac to connect to a Google Cloud VM via Visual Studio C
 **Open Terminal**:
 
 You can find Terminal in the Applications > Utilities folder, or use Spotlight search (Cmd + Space) and type "Terminal"
+
+<img width="1470" alt="step_5 1 b 6" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/2f9fc856-3ac7-4182-b141-c1d8085700e6">
 
 **Generate the SSH key**:
 
@@ -238,14 +249,25 @@ ssh-keygen -t rsa -f ~/.ssh/[key_filename] -C "[your_email@example.com]" -b 2048
 
 Replace [key_filename] with the desired name for your key (e.g., google_cloud_vm_key), and [your_email@example.com] with your email address.
 
+For instance, to generate an SSH key with the external IP 34.46.40.16 using your username rsuraj02 the command will be 
+
+`ssh-keygen -t rsa -f ~/.ssh/google_cloud_vm_key -C "rsuraj02@example.com" -b 2048`
+
+<img width="980" alt="step_5 1 b 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/d0364490-8f37-4036-a8da-75390f099004">
+
 **Follow the prompts**:
 
 - You will be asked to specify the location to save the key. The default location is usually fine (~/.ssh/), but you can specify a different path if needed.
+  
 - You will also be prompted to enter a passphrase for added security. Press Enter if you do not want to set a passphrase.
+  
+<img width="592" alt="step_5 1 b" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/3ce6f81f-e052-4d21-936a-ffffccdc8904">
 
 **Save paths to public and private keys:**
 
-Once the keys are generated, save the paths to both the private and public keys displayed in the terminal.
+Once the keys are generated, save the paths to both the private and public keys displayed in the terminal. The path with the extension '.pub' is the public key.
+
+<img width="597" alt="step_5 1 b 3" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/448cd726-1650-4589-97cf-21e21bd77d45">
 
 **View the public key:**
 
@@ -254,10 +276,19 @@ Enter the below command to view and copy the public key:
 ```bash
 cat ~/.ssh/google_cloud_vm_key.pub
 ```
+<img width="1467" alt="step_5 1 b 4" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/39d65feb-d41a-4487-95f1-493a0e57b695">
 
 ### **5.2 Add SSH Key to Google Cloud VM**
 
-- Go to your VM instance in the Google Cloud Console
+- Navigate to the [Google Cloud Console](https://console.cloud.google.com/).
+
+- In the left-hand menu, click on "Compute Engine".
+
+     <img width="900" alt="step_10 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/9f1eae9f-2250-4b08-a4f0-80b4f6d8f1a8">
+    
+- Click on your VM instance name.
+   
+   <img width="900" alt="step_11 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/ae7d13fc-ef0d-4643-8185-0e520cd4d904">
   
 - Click "Edit" and navigate to the SSH key section.
   
@@ -347,6 +378,7 @@ sudo apt update
 sudo apt upgrade
   ```
 ## **7.3: Add R Repositories and Install R**
+
 Next, we will add the Comprehensive R Archive Network (CRAN) repository to our sources list and import the public key to ensure secure package installation. We then install the R base package and its development tools, which are crucial for running R and building packages.
   ```bash
 sudo sh -c 'echo "deb https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/" >> /etc/apt/sources.list'
@@ -363,6 +395,7 @@ sudo apt update
 sudo apt upgrade
   ```
 ## **7.4: Install Core R Packages**
+
 We then install essential R packages for data manipulation, visualization, and development, which are widely used in data science and will provide a solid foundation for your projects.
  ```bash
 sudo Rscript -e "install.packages(c('tidyverse', 'dplyr', 'ggplot2', 'devtools', 'formatR', 'remotes', 'selectr', 'languageserver', 'rmarkdown', 'httpgd', 'data.table'), repos='http://cran.rstudio.com/')"
@@ -637,7 +670,7 @@ Click the run icon next to the cell or press `Shift + Enter` (Windows and Mac) t
 
    - Navigate to the [Google Cloud Console](https://console.cloud.google.com/).
 
-   - In the left-hand menu, click on "Compute Engine" and then "VM instances".
+   - In the left-hand menu, click on "Compute Engine".
 
      <img width="900" alt="step_10 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/9f1eae9f-2250-4b08-a4f0-80b4f6d8f1a8">
 
@@ -662,7 +695,12 @@ Click the run icon next to the cell or press `Shift + Enter` (Windows and Mac) t
 Every time the instance is started, the public IP is modified, requiring modifications to the "SSH configuration" setting in your VScode.  To avoid this, you can assign a static IP address.
 
 ### **11.1 Assign the Static IP to Your VM**:
-   - Go to "Compute Engine"
+
+   - Navigate to the [Google Cloud Console](https://console.cloud.google.com/).
+
+   - In the left-hand menu, click on "Compute Engine".
+
+     <img width="900" alt="step_10 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/9f1eae9f-2250-4b08-a4f0-80b4f6d8f1a8">
   
     <img width="900" alt="step_10 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/9f1eae9f-2250-4b08-a4f0-80b4f6d8f1a8">
 
