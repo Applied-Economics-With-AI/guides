@@ -569,7 +569,7 @@ With VSCode configured and connected to your VM, you can start working with R sc
      
      <img width="900" alt="step_8 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/ab570400-ac65-43cd-897b-0bc87fb2e0a3">
 
-### **8.2 Install `languageserver` in R**:
+### **8.2 Install `languageserver` in R:**
    - Open R and run the following command to install the `languageserver` package to enhance the coding interface:
      ```R
      install.packages("languageserver")
