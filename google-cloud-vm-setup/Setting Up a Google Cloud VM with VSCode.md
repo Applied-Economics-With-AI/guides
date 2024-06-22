@@ -97,7 +97,8 @@ First, we need to install and configure Visual Studio Code (VSCode), a popular c
 
 To use Google Cloud services, you need a Google account. If you don't already have one, [follow these steps](https://support.google.com/mail/answer/56256?hl=en-GB) to create a Gmail account.
 
-<img width="900" alt="step_2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/1cfbdc9d-5491-45ea-aa0d-2742e7f8db08">
+![step2](https://github.com/Applied-Economics-With-AI/guides/assets/172032819/9b98da83-3803-4d9b-8468-e8b5b1e290fc)
+
 
 ---
 
