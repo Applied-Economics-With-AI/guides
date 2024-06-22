@@ -15,12 +15,9 @@ Navigate to [Google Cloud](https://cloud.google.com/) and log in with your Gmail
 - Go to **Compute Engine** > **VM instances**.
 - Click on the **SSH** button next to your instance to open a browser-based SSH session.
 
-<aside>
 
-<img width="1047" alt="SSH_position" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/870527e2-01a4-4782-b17d-6789760e719d">
+  <img width="1047" alt="SSH_position" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/870527e2-01a4-4782-b17d-6789760e719d">
 
-
-</aside>
 
 ---
 
@@ -54,10 +51,7 @@ Replace `/test-filestore` with the directory where you want to mount the Filesto
 - In the Google Cloud Console, go to **Compute Engine** > **VM instances**.
 - Select your instance and click **Edit**.
 
-<aside>
-
-
-<img width="900" alt="edit_position" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/fdc55c91-3429-432f-86fe-d9bee94db450">
+  <img width="900" alt="edit_position" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/fdc55c91-3429-432f-86fe-d9bee94db450">
 
 
 ### **4.2 Add the Startup Script**:
@@ -65,19 +59,14 @@ Replace `/test-filestore` with the directory where you want to mount the Filesto
 - Scroll down to the **Automation** section.
 - In the **Startup script** field, enter the following script:
     
-    For example, if your Filestore IP is `10.184.138.132`, your Filestore volume is `/test_fs_vol`, and your mount directory is `/test-filestore`, the script would be:
+- For example, if your Filestore IP is `10.184.138.132`, your Filestore volume is `/test_fs_vol`, and your mount directory is `/test-filestore`, the script would be:
     
     ```bash
     #!/bin/bash
     sudo mount 10.184.138.132:/test_fs_vol /test-filestore
     ```
-    
 
-<aside>
-
-<img width="900" alt="startup_script" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/9b4c892c-6951-4d71-a7f5-90ce0bc70ddc">
-
-</aside>
+   <img width="900" alt="startup_script" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/9b4c892c-6951-4d71-a7f5-90ce0bc70ddc">
 
 - Replace `/test-filestore` with the directory where you want to mount the Filestore.
 - Replace `10.184.138.132` with the IP address of your Filestore.
@@ -148,9 +137,7 @@ If there are issues, check the startup script logs to diagnose the problem:
 - In the File Explorer, navigate to the directory where you mounted the Filestore. This should be `/test-filestore` (or the directory you specified).
 - If you don't see the directory immediately, you may need to open the root directory (`/`) and navigate through the file system to find `/test-filestore`.
 
-<aside>
-
-<img width="1096" alt="navigate_files" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/b1e3ae65-58fa-47bd-8f90-4c0e8a6ce173">
+ <img width="1096" alt="navigate_files" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/b1e3ae65-58fa-47bd-8f90-4c0e8a6ce173">
 
 </aside>
 
