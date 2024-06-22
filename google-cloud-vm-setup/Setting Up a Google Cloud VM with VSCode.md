@@ -132,7 +132,8 @@ In this step, you will create a new VM in your Google Cloud account.
 
 - Then, on the subsequent window, select ‘New Project’ (2)
 
-  <img width="900" alt="step_4 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/83ba9cb8-cecb-4cc0-8104-678841c6d06c">
+
+  <img width="900" alt="step_4 1 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/78e19fb2-fcc9-43a8-a6bc-aacd17b4b75e">
 
 
 ### **4.2 Create an Instance**
@@ -238,7 +239,7 @@ Creating an SSH key on a Mac to connect to a Google Cloud VM via Visual Studio C
 
 You can find Terminal in the Applications > Utilities folder, or use Spotlight search (Cmd + Space) and type "Terminal"
 
-<img width="1470" alt="step_5 1 b 6" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/2f9fc856-3ac7-4182-b141-c1d8085700e6">
+<img width="900" alt="step_5 1 b 6" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/2f9fc856-3ac7-4182-b141-c1d8085700e6">
 
 **Generate the SSH key**:
 
@@ -262,13 +263,13 @@ For instance, to generate an SSH key with the external IP 34.46.40.16 using your
   
 - You will also be prompted to enter a passphrase for added security. Press Enter if you do not want to set a passphrase.
   
-<img width="592" alt="step_5 1 b" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/3ce6f81f-e052-4d21-936a-ffffccdc8904">
+<img width="900" alt="step_5 1 b" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/3ce6f81f-e052-4d21-936a-ffffccdc8904">
 
 **Save paths to public and private keys:**
 
 Once the keys are generated, save the paths to both the private and public keys displayed in the terminal. The path with the extension '.pub' is the public key.
 
-<img width="597" alt="step_5 1 b 3" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/448cd726-1650-4589-97cf-21e21bd77d45">
+<img width="900" alt="step_5 1 b 3" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/448cd726-1650-4589-97cf-21e21bd77d45">
 
 **View the public key:**
 
@@ -277,7 +278,7 @@ Enter the below command to view and copy the public key:
 ```bash
 cat ~/.ssh/google_cloud_vm_key.pub
 ```
-<img width="1467" alt="step_5 1 b 4" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/39d65feb-d41a-4487-95f1-493a0e57b695">
+<img width="900" alt="step_5 1 b 4" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/39d65feb-d41a-4487-95f1-493a0e57b695">
 
 ### **5.2 Add SSH Key to Google Cloud VM**
 
