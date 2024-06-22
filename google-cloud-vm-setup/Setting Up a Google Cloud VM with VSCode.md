@@ -317,7 +317,7 @@ With your SSH keys configured, you can now connect to the VM using VSCode.
 
 - Type "Remote-SSH: Connect to Host" and select it
   
- <img width="900" alt="step_6 1 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/5345322a-81c9-4ca7-b538-2ad10d7c1a64">
+  <img width="900" alt="step_6 1 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/5345322a-81c9-4ca7-b538-2ad10d7c1a64">
 
 
 - Click "Configure SSH Hosts" and choose the file where your SSH key is stored
@@ -334,7 +334,7 @@ User [Google Cloud username]
 IdentityFile [Path to your private key]
 ```
 
-<img width="900" alt="step_6 1 3" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/65673f93-0743-4d2b-8403-a17fbef2ee69">
+  <img width="900" alt="step_6 1 3" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/65673f93-0743-4d2b-8403-a17fbef2ee69">
 
 - The External IP can be found by navigating to ‘Compute Engine’
 
