@@ -17,7 +17,8 @@ Navigate to [Google Cloud](https://cloud.google.com/) and log in with your Gmail
 
 <aside>
 
-![Alt text](cp-filestore-setup/Images/SSH_position.png)
+<img width="1047" alt="SSH_position" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/870527e2-01a4-4782-b17d-6789760e719d">
+
 
 </aside>
 
@@ -56,9 +57,8 @@ Replace `/test-filestore` with the directory where you want to mount the Filesto
 <aside>
 
 
-![Alt text](cp-filestore-setup/Images/edit_position.png)
+<img width="900" alt="edit_position" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/fdc55c91-3429-432f-86fe-d9bee94db450">
 
-</aside>
 
 ### **4.2 Add the Startup Script**:
 
@@ -75,7 +75,7 @@ Replace `/test-filestore` with the directory where you want to mount the Filesto
 
 <aside>
 
-![Alt text](cp-filestore-setup/Images/startup_script.png)
+<img width="900" alt="startup_script" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/9b4c892c-6951-4d71-a7f5-90ce0bc70ddc">
 
 </aside>
 
@@ -150,8 +150,7 @@ If there are issues, check the startup script logs to diagnose the problem:
 
 <aside>
 
-
-![Alt text](cp-filestore-setup/Images/navigate_files.png)
+<img width="1096" alt="navigate_files" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/b1e3ae65-58fa-47bd-8f90-4c0e8a6ce173">
 
 </aside>
 
