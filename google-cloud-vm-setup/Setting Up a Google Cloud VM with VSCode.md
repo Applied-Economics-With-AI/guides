@@ -87,7 +87,8 @@ First, we need to install and configure Visual Studio Code (VSCode), a popular c
 
 - Open VSCode.
 - Click on the Extensions tab on the left sidebar
-  ![Install Remote SSH Extension]([https://github.com/Applied-Economics-With-AI/guides/tree/main/google-cloud-vm-setup/images/Step_1.2.2.png?raw=true)
+  <img width="1470" alt="step_1 2 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/348d6a3d-8269-4175-b0cc-ea5c2c88da37">
+
 - Search for "Remote - SSH: Editing Configuration Files" and click "Install" to add the extension to VSCode.
 
 ---
