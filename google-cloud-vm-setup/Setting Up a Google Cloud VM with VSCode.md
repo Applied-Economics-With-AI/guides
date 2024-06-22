@@ -133,11 +133,6 @@ In this step, you will create a new VM in your Google Cloud account.
 
   <img width="900" alt="step_4 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/83ba9cb8-cecb-4cc0-8104-678841c6d06c">
 
-<aside>
-
-![Alt text](google-cloud-vm-setup/Images/create_new_project.png)
-
-</aside>
 
 ### **4.2 Create an Instance**
 
