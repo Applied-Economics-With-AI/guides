@@ -43,16 +43,16 @@ We will cover the following steps to set up your local machine for remote develo
 - [Step 8: Open an R Script in VSCode](#step-8-open-an-r-script-in-vscode)
   - Create and run R scripts in VSCode, leveraging the power of the virtual machine.
 
-- [Step 9: Open a Python Notebook in VSCode](#step-10-open-a-python-notebook-in-vscode)
+- [Step 9: Open a Python Notebook in VSCode](#step-9-open-a-python-notebook-in-vscode)
   - Create and run Python notebooks in VSCode, allowing interactive development on the virtual machine.
 
-- [Step 10: Starting and Stopping the VM](#step-11-starting-and-stopping-the-vm)
+- [Step 10: Starting and Stopping the VM](#step-10-starting-and-stopping-the-vm)
   - Manage the start and stop operations of your virtual machine.
 
-- [Step 11: Create a Static IP Address](#step-12-create-a-static-ip-address)
+- [Step 11: Create a Static IP Address](#step-11-create-a-static-ip-address)
   - Assign a static IP address to your virtual machine to avoid reconfiguration issues when the machine restarts.
 
-- [Step 12: Installing GitHub Copilot](#step-13-installing-github-copilot)
+- [Step 12: Installing GitHub Copilot](#step-12-installing-github-copilot)
   - Set up GitHub Copilot in VSCode to enhance your programming experience.
 
 
