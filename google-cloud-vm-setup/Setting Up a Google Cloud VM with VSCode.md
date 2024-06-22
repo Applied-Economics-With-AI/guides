@@ -89,7 +89,7 @@ First, we need to install and configure Visual Studio Code (VSCode), a popular c
 
 - Search for "Remote - SSH: Editing Configuration Files" and click "Install" to add the extension to VSCode.
   
-<img width="900" alt="Step_1 2 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/4b9e1027-b4a3-4466-8582-c82938eb390b">
+  <img width="900" alt="Step_1 2 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/4b9e1027-b4a3-4466-8582-c82938eb390b">
 
 ---
 
@@ -145,11 +145,11 @@ In this step, you will create a new VM in your Google Cloud account.
    
 - In the left-hand menu, click on "Compute Engine" and then "VM instances".
 
-<img width="900" alt="step_4 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/7dd41b4b-3e40-4849-9031-d93067fe3729">
+  <img width="900" alt="step_4 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/7dd41b4b-3e40-4849-9031-d93067fe3729">
 
 -  Select "Create Instance" and configure the settings.
-  
-<img width="900" alt="step_4 2 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/1cae86cb-999f-4263-86dc-6284dbac2405">
+ 
+  <img width="900" alt="step_4 2 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/1cae86cb-999f-4263-86dc-6284dbac2405">
 
 
 ### **4.3 Configure the VM**
@@ -188,19 +188,19 @@ You can reduce costs by selecting "Spot" instances under the VM provisioning mod
 
 - In "Management", enable "Deletion protection"
   
-<img width="900" alt="step_4 5 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/bb355bc8-0492-4591-8e05-74a699c973e6">
+  <img width="900" alt="step_4 5 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/bb355bc8-0492-4591-8e05-74a699c973e6">
 
 ### **4.6 Create the VM**
 
 - Click "Create" to start your VM. It will automatically start, and costs will begin to accrue
   
-<img width="900" alt="step_4 6" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/6343a9c5-f14a-44a6-8a50-d334c11b938f">
+  <img width="900" alt="step_4 6" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/6343a9c5-f14a-44a6-8a50-d334c11b938f">
 
 ### **4.7 Monitor Your Costs**
 
 - You can monitor your costs in the billing section of the navigation menu or the quick access menu
   
-<img width="900" alt="step_4 7" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/fe68635b-0f38-4f64-95e4-d6f35ab236e2">
+  <img width="900" alt="step_4 7" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/fe68635b-0f38-4f64-95e4-d6f35ab236e2">
 
 ---
 
@@ -269,13 +269,13 @@ cat ~/.ssh/google_cloud_vm_key.pub
 
 - Click "Add Item" and paste your public key. Save the changes.
   
-<img width="900" alt="step_5 2 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/91844144-9b1f-4109-b8e0-f1660dd59175">
+  <img width="900" alt="step_5 2 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/91844144-9b1f-4109-b8e0-f1660dd59175">
 
-<img width="900" alt="step_5 2 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/b1f0d1a0-9193-4a53-bc9e-29351ad10987">
+  <img width="900" alt="step_5 2 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/b1f0d1a0-9193-4a53-bc9e-29351ad10987">
 
 - Reset the VM instance to apply the changes
   
-<img width="900" alt="step_5 2 3" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/6d805ff9-9a16-4011-9917-d3ae0c7bf96c">
+  <img width="900" alt="step_5 2 3" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/6d805ff9-9a16-4011-9917-d3ae0c7bf96c">
 
 ---
 
@@ -290,7 +290,7 @@ With your SSH keys configured, you can now connect to the VM using VSCode.
 
 - Type "Remote-SSH: Connect to Host" and select it
   
-    <img width="900" alt="step_6 1 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/5345322a-81c9-4ca7-b538-2ad10d7c1a64">
+ <img width="900" alt="step_6 1 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/5345322a-81c9-4ca7-b538-2ad10d7c1a64">
 
 
 - Click "Configure SSH Hosts" and choose the file where your SSH key is stored
@@ -322,7 +322,7 @@ IdentityFile [Path to your private key]
 
 - Choose the configured host
 
-<img width="900" alt="step_6 2 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/1f341376-79f7-4245-97a6-eec68104ffdf">
+  <img width="900" alt="step_6 2 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/1f341376-79f7-4245-97a6-eec68104ffdf">
 
 - Select "Linux" as the system type and continue (may not be required to choose system type in Mac)
 
@@ -336,7 +336,7 @@ Once connected, you can install the necessary tools and scripts on your VM.
 
 - Open the terminal in VSCode by clicking on the icon shown below.
   
-<img width="900" alt="step_7 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/6d56e3de-d645-4524-95f0-893121df487d">
+  <img width="900" alt="step_7 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/6d56e3de-d645-4524-95f0-893121df487d">
 
 
 ## **7.2: Update and Install Necessary Packages**
@@ -536,7 +536,7 @@ With VSCode configured and connected to your VM, you can start working with R sc
    - Download and install R (version 3.4.0 or higher) for your platform from the [CRAN website](https://cran.r-project.org/).
    - For Windows users: During installation, check the option "Save version number in registry" to allow the R extension in VSCode to automatically find the R executable.
      
-<img width="900" alt="step_8 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/ab570400-ac65-43cd-897b-0bc87fb2e0a3">
+     <img width="900" alt="step_8 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/ab570400-ac65-43cd-897b-0bc87fb2e0a3">
 
 ### **8.2 Install `languageserver` in R**:
    - Open R and run the following command to install the `languageserver` package to enhance the coding interface:
@@ -550,11 +550,11 @@ With VSCode configured and connected to your VM, you can start working with R sc
 ### **8.3 Install R Extension for VSCode**:
    - Open VSCode and go to the Extensions tab on the left sidebar.
 
-<img width="900" alt="step_1 2 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/348d6a3d-8269-4175-b0cc-ea5c2c88da37">
+     <img width="900" alt="step_1 2 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/348d6a3d-8269-4175-b0cc-ea5c2c88da37">
   
    - Search for "R" and install the extension provided.
 
-<img width="900" alt="step_8 3 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/344a2068-f2a5-44be-a567-a27e2a5ed164">
+     <img width="900" alt="step_8 3 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/344a2068-f2a5-44be-a567-a27e2a5ed164">
 
 ### **8.4 Create a New R Script**
 
@@ -562,7 +562,7 @@ With VSCode configured and connected to your VM, you can start working with R sc
   
   <img width="900" alt="step_8 4 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/c40a97e2-78db-4f96-a2d9-61a10200866b">
 
-- Click on R document, an R Document (.R) is a basic script for running R code.
+- Click on the R document. An R Document (.R) is a basic script for running R code.
 
   <img width="900" alt="step_8 4 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/fb4e4a0a-8e41-4ee0-8a85-7bb43d130b74">
 
@@ -574,9 +574,10 @@ With VSCode configured and connected to your VM, you can start working with R sc
    ```r
    print('Hello, R!')
     ```
-- To run the code, highlight the lines you want to execute and press `Ctrl + Enter` (Windows) or `Cmd + Enter` (Mac). The output will appear in the terminal at the bottom of the VSCode window using the configured Radian console.
+- To run the code, highlight the lines you want to execute and press `Ctrl + Enter` (Windows) or `Cmd + Enter` (Mac). The output will appear in the terminal at the bottom of the VSCode 
+  window using the configured Radian console.
   
-<img width="900" alt="step_8 5" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/cc9df9a9-3127-45c5-8c5e-4ae173fa1191">
+  <img width="900" alt="step_8 5" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/cc9df9a9-3127-45c5-8c5e-4ae173fa1191">
 
 - Also, if radian is configured correctly, you should be able to view `r$>` in the command line of the terminal
    
@@ -585,20 +586,21 @@ With VSCode configured and connected to your VM, you can start working with R sc
 ---
 
 ### **Step 9: Open a Python Notebook in VSCode**
-- VSCode also supports Jupyter notebooks, allowing you to work with Python in an interactive environment. Python is already installed through the setup script. To use Python through Jupyter Notebook in VScode 
+- VSCode also supports Jupyter notebooks, allowing you to work with Python in an interactive environment. Python is already installed through the setup script. To use Python through 
+  Jupyter Notebook in VScode 
 
 ### **9.1 Install Extensions for VSCode**
 - Go to the Extensions tab in VSCode.
 
-<img width="900" alt="step_1 2 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/348d6a3d-8269-4175-b0cc-ea5c2c88da37">
+  <img width="900" alt="step_1 2 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/348d6a3d-8269-4175-b0cc-ea5c2c88da37">
 
 - Search for "Python" and install the extension provided by Microsoft.
 
-<img width="900" alt="step_9 1 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/8780ad44-a0d2-426b-8a71-e9b458790b6e">
+  <img width="900" alt="step_9 1 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/8780ad44-a0d2-426b-8a71-e9b458790b6e">
 
 - Search for "Jupyter" and install the extension provided by Microsoft.
   
-<img width="900" alt="step_9 1 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/ee8fd229-20be-4ad7-9fa9-9f00fd99cfda">
+  <img width="900" alt="step_9 1 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/ee8fd229-20be-4ad7-9fa9-9f00fd99cfda">
 
 ### **9.2 Create a New Jupyter Notebook**
 - In VSCode, click on "File" and then the "New File" as shown below
@@ -607,8 +609,8 @@ With VSCode configured and connected to your VM, you can start working with R sc
 
 - Click on Jupyter to use Python in a Jupyter notebook. Name the file with a .ipynb extension, for example, example_notebook.ipynb.
   
-<img width="900" alt="step_9 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/dd4fda1d-de8e-442d-9c57-317bc01026cb">
-
+  <img width="900" alt="step_9 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/dd4fda1d-de8e-442d-9c57-317bc01026cb">
+ 
 
 ### **9.3 Kernel Selection**
 Before running any code, ensure that the notebook is using the correct Python kernel. View the top right button as indicated below; if the kernel isn't installed, then select it to choose the Python interpreter installed on your VM.
@@ -640,21 +642,21 @@ Click the run icon next to the cell or press `Shift + Enter` (Windows and Mac) t
 
    - In the left-hand menu, click on "Compute Engine" and then "VM instances".
 
-<img width="900" alt="step_10 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/9f1eae9f-2250-4b08-a4f0-80b4f6d8f1a8">
+     <img width="900" alt="step_10 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/9f1eae9f-2250-4b08-a4f0-80b4f6d8f1a8">
 
    - Find your VM in the list and click the "Start" button.
 
-<img width="900" alt="step_10 1 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/25dfe5f1-8de2-4120-aa30-91c6a94eb557">
+     <img width="900" alt="step_10 1 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/25dfe5f1-8de2-4120-aa30-91c6a94eb557">
 
 ### **10.2 Stopping the VM**
 
    - In the left-hand menu, click on "Compute Engine".
      
-<img width="900" alt="step_10 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/9f1eae9f-2250-4b08-a4f0-80b4f6d8f1a8">
+     <img width="900" alt="step_10 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/9f1eae9f-2250-4b08-a4f0-80b4f6d8f1a8">
 
    - Find your VM in the list and click the "Stop" button.
      
-<img width="900" alt="step_10 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/72efaabc-ad10-4945-8933-68ed8be455ee">
+     <img width="900" alt="step_10 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/72efaabc-ad10-4945-8933-68ed8be455ee">
 
 ## **Step 11: Create a Static IP Address**
 
@@ -663,7 +665,7 @@ Every time the instance is started, the public IP is modified, requiring modific
 ### **11.1 Assign the Static IP to Your VM**:
    - Go to "Compute Engine"
   
-<img width="900" alt="step_10 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/9f1eae9f-2250-4b08-a4f0-80b4f6d8f1a8">
+    <img width="900" alt="step_10 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/9f1eae9f-2250-4b08-a4f0-80b4f6d8f1a8">
 
    - Click on your VM instance name.
    
@@ -671,23 +673,23 @@ Every time the instance is started, the public IP is modified, requiring modific
 
    - Click "Edit".
      
-<img width="900" alt="step_5 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/3ef99823-5e45-4c99-9b85-5089f1782a2c">
+     <img width="900" alt="step_5 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/3ef99823-5e45-4c99-9b85-5089f1782a2c">
 
    - Navigate to "Network interfaces"
      
-<img width="900" alt="step_12 0" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/5d9909f5-019f-4b7e-b549-9e315c38ef72">
+     <img width="900" alt="step_12 0" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/5d9909f5-019f-4b7e-b549-9e315c38ef72">
 
    - Click "External IPv4 Address".
      
-<img width="900" alt="step_12 0 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/38389eaa-526b-4d27-ab03-6fb8597f7ce9">
+     <img width="900" alt="step_12 0 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/38389eaa-526b-4d27-ab03-6fb8597f7ce9">
 
    - Select "Reserve Static Address"
      
-<img width="900" alt="step_12 0 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/faf4a292-f60e-41a7-9b10-b2b59fd9045c">
+     <img width="900" alt="step_12 0 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/faf4a292-f60e-41a7-9b10-b2b59fd9045c">
 
-Select a name and click "Reserve"
-
-<img width="900" alt="step_12 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/0a69fe32-e165-408b-a058-a06bd577cb6a">
+   - Select a name and click "Reserve"
+  
+     <img width="900" alt="step_12 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/0a69fe32-e165-408b-a058-a06bd577cb6a">
 
 
 ---
@@ -699,22 +701,22 @@ Select a name and click "Reserve"
      
    - Click on the Extensions tab on the left sidebar.
      
-<img width="900" alt="step_1 2 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/348d6a3d-8269-4175-b0cc-ea5c2c88da37">
+     <img width="900" alt="step_1 2 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/348d6a3d-8269-4175-b0cc-ea5c2c88da37">
 
    - Type "GitHub Copilot" in the search bar and press Enter.
      
    - Click the "Install" button next to the GitHub Copilot extension.
 
-<img width="900" alt="step_13" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/d2324b7f-5923-4092-b9b3-69af0b3c30af">
+     <img width="900" alt="step_13" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/d2324b7f-5923-4092-b9b3-69af0b3c30af">
 
 ### **12.2 Enable GitHub Copilot in VSCode**
    - Once installed, you will be prompted to sign in to your GitHub account. Follow the on-screen instructions to complete the authentication process (**).
      
    - Click on the icon shown below to verify that Copilot is running.
      
-<img width="900" alt="step_12 2 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/d8f63ddd-8a15-417b-b37a-e63230a83194">
+     <img width="900" alt="step_12 2 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/d8f63ddd-8a15-417b-b37a-e63230a83194">
 
-<img width="900" alt="step_12 2 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/f446a8d2-0f9d-4d36-805f-eaf206feb38e">
+     <img width="900" alt="step_12 2 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/f446a8d2-0f9d-4d36-805f-eaf206feb38e">
 
    - Open any file or start a new one (see steps 9 and 10). GitHub Copilot will start providing code suggestions as you type.
 
