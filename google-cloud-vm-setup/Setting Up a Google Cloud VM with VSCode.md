@@ -1,4 +1,4 @@
-<img width="1467" alt="step_8 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/c0cf813b-32bb-43ae-82d6-1f864973c3f1"># Setting Up a Google Cloud VM for R and Python with VSCode
+# Setting Up a Google Cloud VM for R and Python with VSCode
 
 This guide is aimed at helping researchers set up a virtual machine capable of running R and Python in the cloud using Google Cloud Platform (GCP).  It primarily documents first-hand experience setting up and using a virtual machine on the Google Cloud Platform (GCP).  Similar setups can be achieved with AWS and Microsoft Azure, though I have no experience with these platforms. This has been an invaluable tool for me since the beginning of my PhD, and has drastically increased my productivity across many projects.
 
