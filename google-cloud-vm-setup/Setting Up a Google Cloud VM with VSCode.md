@@ -144,7 +144,7 @@ In this step, you will create a new VM in your Google Cloud account.
 
 -  Select "Create Instance" and configure the settings.
  
-  <img width="900" alt="step_4 2 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/1cae86cb-999f-4263-86dc-6284dbac2405">
+   <img width="900" alt="step_4 2 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/1cae86cb-999f-4263-86dc-6284dbac2405">
 
 
 ### **4.3 Configure the VM**
