@@ -88,7 +88,7 @@ First, we need to install and configure Visual Studio Code (VSCode), a popular c
 - Open VSCode.
 - Click on the Extensions tab on the left sidebar
   
-  <img width="800" alt="step_1 2 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/348d6a3d-8269-4175-b0cc-ea5c2c88da37">
+  <img width="850" alt="step_1 2 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/348d6a3d-8269-4175-b0cc-ea5c2c88da37">
 
 - Search for "Remote - SSH: Editing Configuration Files" and click "Install" to add the extension to VSCode.
 
