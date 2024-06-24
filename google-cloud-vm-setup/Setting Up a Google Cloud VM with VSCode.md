@@ -755,8 +755,6 @@ Every time the instance is started, the public IP is modified, requiring modific
      
      <img width="900" alt="step_12 2 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/d8f63ddd-8a15-417b-b37a-e63230a83194">
 
-     <img width="900" alt="step_12 2 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/f446a8d2-0f9d-4d36-805f-eaf206feb38e">
-
    - Open any file or start a new one (see steps 9 and 10). GitHub Copilot will start providing code suggestions as you type.
 
 ### **12.3 Using GitHub Copilot**
