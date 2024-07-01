@@ -749,7 +749,7 @@ Every time the instance is started, the public IP is modified, requiring modific
      <img width="900" alt="step_13" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/d2324b7f-5923-4092-b9b3-69af0b3c30af">
 
 ### **12.2 Enable GitHub Copilot in VSCode**
-   - Once installed, you will be prompted to sign in to your GitHub account. Follow the on-screen instructions to complete the authentication process (**).
+   - Once installed, you will be prompted to sign in to your GitHub account. Follow the on-screen instructions to complete the authentication process.
      
    - Click on the icon shown below to verify that Copilot is running.
      
