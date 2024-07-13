@@ -142,7 +142,7 @@ In this step, you will create a new VM in your Google Cloud account.
   
 - Install the 'Compute Engine API' when prompted
   
-   <img width="900" alt="step_4 x" src="https://github.com/user-attachments/assets/ae59a3df-1628-4a64-91c3-3b7d5d9d4042">
+   <img width="900" alt="step 4 2" src="https://github.com/user-attachments/assets/df7f6ca9-3d71-4945-97b9-7722c8b5ebf8">
 
 - In the left-hand menu, click on "Compute Engine" and then "VM instances".
 
