@@ -139,7 +139,11 @@ In this step, you will create a new VM in your Google Cloud account.
 ### **4.2 Create an Instance**
 
 - Navigate to the [Google Cloud Console](https://console.cloud.google.com/).
-   
+  
+- Install the 'Compute Engine API' when prompted
+  
+   <img width="900" alt="step_4 x" src="https://github.com/user-attachments/assets/ae59a3df-1628-4a64-91c3-3b7d5d9d4042">
+
 - In the left-hand menu, click on "Compute Engine" and then "VM instances".
 
   <img width="900" alt="step_4 2" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/7dd41b4b-3e40-4849-9031-d93067fe3729">
@@ -162,7 +166,7 @@ In this step, you will create a new VM in your Google Cloud account.
 ### **4.3.2 Configure the Bootdisk**
 - Click "Change" next to the Boot disk section.
 - In the Operating System dropdown, select "Ubuntu".
-- In the Version dropdown, select "Ubuntu 18.04 LTS".
+- In the Version dropdown, select "Ubuntu 20.04 LTS".
 
   <img width="900" alt="step_4 3 2 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/5be5826b-42eb-417f-8038-c52986ab70ba">
 
@@ -383,16 +387,15 @@ sudo apt upgrade
 
 Next, we will add the Comprehensive R Archive Network (CRAN) repository to our sources list and import the public key to ensure secure package installation. We then install the R base package and its development tools, which are crucial for running R and building packages.
   ```bash
-sudo sh -c 'echo "deb https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/" >> /etc/apt/sources.list'
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 
+E298A3A825C0D65DFD57CBB651716619E084DAB9
 sudo apt-get update
 sudo apt upgrade
 sudo apt-get install -y r-base r-base-dev
-
-sudo apt-get install -y libfontconfig1-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev \
-    libpng-dev libtiff5-dev libjpeg-dev libcairo2-dev libudunits2-dev libpoppler-cpp-dev \
-    libgdal-dev cmake
-
+sudo apt-get install -y libfontconfig1-dev libharfbuzz-dev libfribidi-dev libfreetype6-
+dev \
+  libpng-dev libtiff5-dev libjpeg-dev libcairo2-dev libudunits2-dev libpoppler-cpp-dev \
+  libgdal-dev cmake
 sudo apt update
 sudo apt upgrade
   ```
@@ -465,12 +468,15 @@ export LANG=en_US.UTF-8
 ## **7.10: Install Additional R Packages from GitHub**
 Install additional R packages directly from GitHub for specialized functionalities.
 ```bash
-devtools::install_github("trinker/textclean")
-devtools::install_github('Mikata-Project/ggthemr')
-extrafont::font_import()
-extrafont::loadfonts(device="postscript")
-extrafont::fonts()
+sudo Rscript -e "install.packages('devtools', repos='https://cloud.r-project.org/')"
+sudo Rscript -e "install.packages('extrafont', repos='https://cloud.r-project.org/')"
+sudo Rscript -e "devtools::install_github('trinker/textclean')"
+sudo Rscript -e "devtools::install_github('Mikata-Project/ggthemr')"
+sudo Rscript -e "extrafont::font_import()"
+sudo Rscript -e "extrafont::loadfonts(device='postscript')"
+sudo Rscript -e "print(extrafont::fonts())"
 ```
+The above code requires
 ## **7.11: Attach Persistent Disk**
 If you need additional storage, attach a persistent disk. Be cautious not to format an existing disk if it contains important data.
 ```bash
@@ -656,8 +662,6 @@ Write your Python code in the cell.
 
 Example:
 ```markdown
-python
-Copy code
 print("Hello, Python!")
 ```
 - Click the run icon next to the cell or press `Shift + Enter` (Windows and Mac) to execute the code. The output will appear directly below the cell.
