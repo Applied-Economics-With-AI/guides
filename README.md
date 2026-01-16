@@ -82,6 +82,13 @@ This guide proposes a simple, battle-tested directory structure for empirical re
 - [Software Carpentry](https://software-carpentry.org/) - Computing skills for researchers
 - [Research Computing at LSE](https://info.lse.ac.uk/staff/divisions/dts/help/guides-faqs/fasd-guides/Research-Computing) - LSE-specific resources
 
+### Social Science Research Workflows (Code, Data, and Reproducibility)
+- [Code and Data for the Social Sciences: A Practitioner's Guide (Gentzkow & Shapiro)](https://web.stanford.edu/~gentzkow/research/CodeAndData.xhtml) - Classic guide to automation, version control, directory structure, and project management
+- [Social Science PhD Tech Stack (Kevin Bryan)](https://kevinbryanecon.com/techstack.html) - Practical guide to a modern research tech stack (version control, editors, AI tools, and reproducible workflows)
+- [Project TIER Protocol](https://www.projecttier.org/tier-protocol/) - Widely used protocol for transparent and reproducible research in the social sciences
+- [BITSS (Berkeley Initiative for Transparency in the Social Sciences)](https://www.bitss.org/) - Training and resources for open, rigorous, and reproducible social science
+- [Code, Data, and Version Control: Best Practices for Economic Research (Brendan M. Price, 2023)](https://www.brendanmichaelprice.com/workflow/2023lectures/Price_BestPractices_Apr2023.pdf) - Slide deck with concrete best practices and common pitfalls
+
 ## Contributing
 
 We welcome contributions to improve these guides or add new ones! If you have suggestions, corrections, or want to contribute a new guide, please:
