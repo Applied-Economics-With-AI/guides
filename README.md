@@ -13,6 +13,7 @@ These guides have been developed by [Peter John Lambert](mailto:p.j.lambert@lse.
 2. [Guides](#guides)
    - [Setting Up a Google Cloud VM for R and Python with VSCode](#setting-up-a-google-cloud-vm-for-r-and-python-with-vscode)
    - [Mount Filestore on the GCP Instance](#mount-filestore-on-the-gcp-instance)
+   - [Research Project Folder Structure (Recommended)](#research-project-folder-structure-recommended)
 3. [Further Resources](#further-resources)
 4. [Contributing](#contributing)
 5. [Support](#support)
@@ -49,6 +50,12 @@ This guide explains how to automatically mount a Google Cloud Filestore on your 
 - Troubleshooting tips
 
 [📖 Read the full guide](./cp-filestore-setup/Mount%20Filestore%20on%20the%20GCP%20Instance.md)
+
+### Research Project Folder Structure (Recommended)
+
+This guide proposes a simple, battle-tested directory structure for empirical research projects. It helps keep raw data immutable, derived data reproducible, scripts organised, and makes it easier to collaborate (including with AI assistants like Cline / Claude Code).
+
+[📖 Read the full guide](./project-structure/Research%20Project%20Folder%20Structure.md)
 
 ## Further Resources
 

@@ -825,6 +825,7 @@ For detailed instructions and tips on how to use GitHub Copilot effectively in V
 
 Now that you have your VM set up, you might want to:
 
+- **Set up a clean project structure:** For a simple, reproducible directory layout (raw data vs derived data, scripts, manuscript outputs, and AI context), see our [Research Project Folder Structure guide](../project-structure/Research%20Project%20Folder%20Structure.md).
 - **Mount shared storage:** If you need persistent storage that can be shared across VMs or team members, see our [Filestore mounting guide](../cp-filestore-setup/Mount%20Filestore%20on%20the%20GCP%20Instance.md).
 - **Set up version control:** Configure [Git](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) on your VM for version control.
 - **Explore BigQuery:** For large-scale data analysis, consider using [BigQuery](https://cloud.google.com/bigquery/docs/introduction) alongside your VM.
