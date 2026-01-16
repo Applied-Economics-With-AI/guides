@@ -1,14 +1,16 @@
 # Setting Up a Google Cloud VM for R and Python with VSCode
 
-This guide is aimed at helping researchers set up a virtual machine capable of running R and Python in the cloud using Google Cloud Platform (GCP).  It primarily documents first-hand experience setting up and using a virtual machine on the Google Cloud Platform (GCP).  Similar setups can be achieved with AWS and Microsoft Azure, though I have no experience with these platforms. This has been an invaluable tool for me since the beginning of my PhD, and has drastically increased my productivity across many projects.
+This guide is aimed at helping researchers set up a virtual machine capable of running R and Python in the cloud using [Google Cloud Platform (GCP)](https://cloud.google.com/). It primarily documents first-hand experience setting up and using a virtual machine on GCP. Similar setups can be achieved with [AWS](https://aws.amazon.com/) and [Microsoft Azure](https://azure.microsoft.com/), though these guides focus specifically on Google Cloud. This has been an invaluable tool for me since the beginning of my PhD, and has drastically increased my productivity across many projects.
 
-This guide is a mix of personal experience and tips with some more standard instructions on how to set up your own virtual work environment.  It is written with a view to aid applied economics researchers. I have borrowed from many sources, and tried my best to correctly attribute these.
+This guide is a mix of personal experience and tips with some more standard instructions on how to set up your own virtual work environment. It is written with a view to aid applied economics researchers. I have borrowed from many sources, and tried my best to correctly attribute these.
 
-We will first confugure our Cloud-based server using the Google Cloud Virtual Machine (VM) and Visual Studio Code (VSCode). You'll be able to leverage the VM's resources – like additional processing power and memory – for your coding projects while working within your VSCode setup.
+We will first configure our cloud-based server using the Google Cloud Virtual Machine (VM) and Visual Studio Code (VSCode). You'll be able to leverage the VM's resources – like additional processing power and memory – for your coding projects while working within your VSCode setup.
 
-This guide has been prepared by Peter John Lambert, Yannick Schindler, Suraj Rajesh, Yifan Wang, Juan Bautista Sosa, Tongmeng Xie, Pauline Bucher, Thiemo Fetzer, and Luca Barbato.
+**Author:** [Peter John Lambert](mailto:p.j.lambert@lse.ac.uk), London School of Economics
 
-We welcome any questions or feedback, which you can leave here (link to "issues" section of the guides repo).
+**Contributors:** Yannick Schindler, Suraj Rajesh, Yifan Wang, Juan Bautista Sosa, Tongmeng Xie, Pauline Bucher, Thiemo Fetzer, and Luca Barbato.
+
+We welcome any questions or feedback, which you can leave on our [GitHub Issues page](https://github.com/Applied-Economics-With-AI/guides/issues).
 
 ---
 
@@ -16,7 +18,7 @@ We welcome any questions or feedback, which you can leave here (link to "issues"
 
 We will cover the following steps to set up your local machine for remote development using a Google Cloud Virtual Machine (VM):
 
-- [Why do I need my own virtual machine? A Pros and Cons](#why-do-i-need-my-own-virtual-machine-a-pros-and-cons-tbc)
+- [Why do I need my own virtual machine? Pros and Cons](#why-do-i-need-my-own-virtual-machine-pros-and-cons)
   - Understand the advantages and costs of using a virtual machine, helping you decide if it's the right solution for your needs.
 
 - [Step 1: Install and Configure VSCode](#step-1-install-and-configure-vscode)
@@ -58,17 +60,51 @@ We will cover the following steps to set up your local machine for remote develo
 
 ---
 
-## **Why do I need my own virtual machine? A Pros and Cons (TBC)**
+## **Why do I need my own virtual machine? Pros and Cons**
 
-There are at least three reasons to setup a virtual machine: (1) Flexibility, (2) Scalability, (3) Productivity. Reasons not to setup are the technical barriers to entry (though this guide aims to offset this!) and cost.  On cost, I would argue that the relevant counterfactual would be purchasing a mid-range laptop (32GB of memory or higher) which will depreciate, puts an upper bound on the power available to you, and requires liquidity to purchase.
+There are at least three reasons to set up a virtual machine: (1) Flexibility, (2) Scalability, (3) Productivity. Reasons not to set up include the technical barriers to entry (though this guide aims to offset this!) and cost. On cost, I would argue that the relevant counterfactual would be purchasing a mid-range laptop (32GB of memory or higher) which will depreciate, puts an upper bound on the power available to you, and requires upfront liquidity to purchase.
 
-(1) Flexibility
+### (1) Flexibility
 
-While it is very common for universities to have their own computational resources for working with big data, I have found that having my own server affords a great deal more flexibility.  The most obvious advantage is that I can turn the machine on and off as needed, and do not have to submit jobs to a schedule nor compete for resources with others.  The ability to work in real-time drastically increases productivity and avoids lengthy wait times, which (for me) disrupt my workflow substantially.  Another way in which a virtual machine offers flexibility is in costs.  Apart from the cost of data storage, you will not pay for any computational resources when not using the machine (unlike personal hardware).  And if a project is going to be dormant for a while, you can download the data to a personal hard disk and shudder the virtual machine completely - at which point your costs become 0.
+While it is very common for universities to have their own computational resources for working with big data, I have found that having my own server affords a great deal more flexibility. The most obvious advantage is that I can turn the machine on and off as needed, and do not have to submit jobs to a schedule nor compete for resources with others. The ability to work in real-time drastically increases productivity and avoids lengthy wait times, which (for me) disrupt my workflow substantially.
 
-(2) Scalability
+Another way in which a virtual machine offers flexibility is in costs. Apart from the cost of data storage, you will not pay for any computational resources when not using the machine (unlike personal hardware). And if a project is going to be dormant for a while, you can download the data to a personal hard disk and shut down the virtual machine completely - at which point your costs become essentially zero.
 
-The best feature of the Google Cloud
+### (2) Scalability
+
+The best feature of Google Cloud is its on-demand scalability. Unlike physical hardware, where you're limited by the specifications you purchased, a cloud VM can be resized at any time to meet your needs:
+
+- **Vertical scaling:** Need more power for a computationally intensive task? You can temporarily upgrade your VM to a machine with more CPUs and RAM, then downgrade when the task is complete. This means you only pay for extra power when you actually need it.
+- **GPU access:** For machine learning workloads or parallel computing tasks, you can attach [NVIDIA GPUs](https://cloud.google.com/compute/docs/gpus) to your VM without having to purchase expensive hardware.
+- **Storage flexibility:** Start with minimal storage and expand as your data grows. You can also attach [persistent disks](https://cloud.google.com/compute/docs/disks) or use [Cloud Filestore](https://cloud.google.com/filestore) for shared storage across multiple VMs (see our [Filestore mounting guide](../cp-filestore-setup/Mount%20Filestore%20on%20the%20GCP%20Instance.md)).
+- **Multiple VMs:** For large-scale data processing, you can spin up multiple VMs to parallelize your work, then terminate them when done.
+
+### (3) Productivity
+
+The combination of flexibility and scalability translates directly into productivity gains:
+
+- **No hardware maintenance:** Google handles all the physical infrastructure, security updates, and system maintenance.
+- **Work from anywhere:** Access your development environment from any device with an internet connection. Your work continues even if your laptop breaks.
+- **Consistent environment:** Your VM maintains its state between sessions. No more "it works on my machine" problems when collaborating with others.
+- **Integration with cloud services:** Seamlessly integrate with other Google Cloud services like [BigQuery](https://cloud.google.com/bigquery) for large-scale data analysis, [Cloud Storage](https://cloud.google.com/storage) for data lakes, or [Vertex AI](https://cloud.google.com/vertex-ai) for machine learning.
+
+### Cost Considerations
+
+While cloud computing offers many advantages, it's important to understand the cost structure:
+
+| Cost Component | Description | Typical Range |
+|----------------|-------------|---------------|
+| Compute (vCPUs + RAM) | Charged per hour of VM uptime | $0.02 - $2.00/hour depending on machine type |
+| Storage | Charged per GB per month | $0.04 - $0.17/GB/month |
+| Network egress | Data transferred out of GCP | First 1GB free, then $0.12/GB |
+| Static IP | Charged when reserved but not in use | $0.01/hour |
+
+> **💡 Cost-saving tips:**
+> - Use [Spot VMs](https://cloud.google.com/spot-vms) for up to 60-91% discount on compute costs
+> - Always stop your VM when not in use
+> - Use the [GCP Pricing Calculator](https://cloud.google.com/products/calculator) to estimate costs
+> - Set up [billing alerts](https://cloud.google.com/billing/docs/how-to/budgets) to avoid surprises
+> - Consider [committed use discounts](https://cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts) for long-term projects
 
 ---
 
@@ -118,7 +154,7 @@ Navigate to [Google Cloud](https://cloud.google.com/), and you will automaticall
 
 - Choose your country and organization when prompted.
 - Add billing information to your account. You will receive $300 worth of free Google Cloud credits to get started.
-- If you need more detailed instructions, refer to [this guide](https://www.optimizesmart.com/how-to-create-a-new-google-cloud-platform-accoun).
+- If you need more detailed instructions, refer to the [official Google Cloud setup guide](https://cloud.google.com/docs/get-started) or this [step-by-step tutorial](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
 
 ---
 
@@ -497,26 +533,46 @@ sudo vim /etc/fstab
 UUID=e73634e9-81bd-459d-9286-0af3273150c1 /mnt/disks/pdisk ext4 discard,defaults,nofail 0 2
 cat /etc/fstab
 ```
-## **7.12: Install Anaconda with Mamba Compiler**
-Anaconda is a popular Python distribution for data science. We install it along with Mamba, a faster package manager, to manage your Python environments and packages efficiently.
+## **7.12: Install Anaconda with Mamba (Optional)**
+
+[Anaconda](https://www.anaconda.com/) is a popular Python distribution for data science that includes many pre-installed packages. [Mamba](https://mamba.readthedocs.io/) is a faster, drop-in replacement for the conda package manager. This step is optional if you prefer to use the system Python installed in Step 7.6.
+
 ```bash
-# Get the device name
-ls -l /dev/disk/by-id/google-*
+# Download the Anaconda installer (check https://www.anaconda.com/download for latest version)
+wget https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh
 
-# Create a folder and mount the disk
-sudo mkdir -p /mnt/disks/pdisk
-sudo mount -o discard,defaults /dev/nvme0n2 /mnt/disks/pdisk
+# Make the installer executable and run it
+chmod +x Anaconda3-2024.02-1-Linux-x86_64.sh
+./Anaconda3-2024.02-1-Linux-x86_64.sh
 
-# Make the disk read/writable
-sudo chmod a+w /mnt/disks/pdisk
+# Follow the prompts:
+# - Press Enter to review the license, then type 'yes' to accept
+# - Press Enter to confirm the default installation location, or specify a custom path
+# - Type 'yes' when asked to initialize conda
 
-# Edit the fstab file to mount the disk on boot
-sudo blkid /dev/nvme0n2
-sudo vim /etc/fstab
-# Add this line to /etc/fstab
-UUID=e73634e9-81bd-459d-9286-0af3273150c1 /mnt/disks/pdisk ext4 discard,defaults,nofail 0 2
-cat /etc/fstab
+# Reload your shell configuration
+source ~/.bashrc
+
+# Verify the installation
+conda --version
+
+# Install Mamba for faster package management (optional but recommended)
+conda install -n base -c conda-forge mamba
+
+# Verify Mamba installation
+mamba --version
+
+# Create a new environment for your project (example)
+mamba create -n research python=3.11 numpy pandas matplotlib scikit-learn jupyter
+
+# Activate the environment
+conda activate research
 ```
+
+> **💡 Tips:**
+> - Use `mamba` instead of `conda` for faster package installation and dependency resolution
+> - Create separate environments for different projects to avoid dependency conflicts
+> - See the [Conda documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) for more on environment management
 ## **7.13: Configure Radian**
 Radian is an enhanced R console for the R language. To configure it in your VSCode settings, first, you need to find where Radian is installed on your VM.
 
@@ -707,8 +763,6 @@ Every time the instance is started, the public IP is modified, requiring modific
    - In the left-hand menu, click on "Compute Engine".
 
      <img width="900" alt="step_10 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/9f1eae9f-2250-4b08-a4f0-80b4f6d8f1a8">
-  
-    <img width="900" alt="step_10 1" src="https://github.com/Applied-Economics-With-AI/guides/assets/172032819/9f1eae9f-2250-4b08-a4f0-80b4f6d8f1a8">
 
    - Click on your VM instance name.
    
@@ -766,8 +820,88 @@ Every time the instance is started, the public IP is modified, requiring modific
 For detailed instructions and tips on how to use GitHub Copilot effectively in VScode, refer to [GitHub Copilot in VSCode](https://code.visualstudio.com/docs/copilot/overview).
 
 ---
-This guide should help you navigate the setup process. If you have any questions, reach out to
 
-[placeholder].
+## **Next Steps**
+
+Now that you have your VM set up, you might want to:
+
+- **Mount shared storage:** If you need persistent storage that can be shared across VMs or team members, see our [Filestore mounting guide](../cp-filestore-setup/Mount%20Filestore%20on%20the%20GCP%20Instance.md).
+- **Set up version control:** Configure [Git](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) on your VM for version control.
+- **Explore BigQuery:** For large-scale data analysis, consider using [BigQuery](https://cloud.google.com/bigquery/docs/introduction) alongside your VM.
 
 ---
+
+## **Further Reading**
+
+### Google Cloud Platform
+- [Google Cloud Console](https://console.cloud.google.com/) - Main dashboard for managing GCP resources
+- [Compute Engine Documentation](https://cloud.google.com/compute/docs) - Official VM documentation
+- [GCP Pricing Calculator](https://cloud.google.com/products/calculator) - Estimate your costs
+- [Google Cloud Free Tier](https://cloud.google.com/free) - Details on free credits and always-free resources
+- [Spot VMs Documentation](https://cloud.google.com/spot-vms) - Learn about cost-effective preemptible instances
+- [GCP Best Practices](https://cloud.google.com/docs/enterprise/best-practices-for-enterprise-organizations) - Enterprise best practices
+
+### Visual Studio Code
+- [VSCode Documentation](https://code.visualstudio.com/docs) - Official documentation
+- [Remote Development Overview](https://code.visualstudio.com/docs/remote/remote-overview) - Remote development guide
+- [VSCode Keyboard Shortcuts](https://code.visualstudio.com/docs/getstarted/keybindings) - Productivity shortcuts
+- [VSCode Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync) - Sync settings across machines
+
+### R Resources
+- [The R Project](https://www.r-project.org/) - Official R website
+- [CRAN](https://cran.r-project.org/) - Comprehensive R Archive Network
+- [R for Data Science](https://r4ds.had.co.nz/) - Free online book by Hadley Wickham
+- [Tidyverse](https://www.tidyverse.org/) - Collection of R packages for data science
+- [RStudio Cheatsheets](https://posit.co/resources/cheatsheets/) - Quick reference guides
+
+### Python Resources
+- [Python.org](https://www.python.org/) - Official Python website
+- [Anaconda Documentation](https://docs.anaconda.com/) - Anaconda distribution docs
+- [Jupyter Documentation](https://jupyter.org/documentation) - Jupyter notebooks guide
+- [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/) - Free online book
+
+### AI-Assisted Coding
+- [GitHub Copilot Documentation](https://docs.github.com/en/copilot) - Official Copilot docs
+- [GitHub Copilot in VSCode](https://code.visualstudio.com/docs/copilot/overview) - VSCode-specific guide
+- [GitHub Education](https://education.github.com/) - Free Copilot access for students/educators
+
+### Research Computing
+- [The Turing Way](https://the-turing-way.netlify.app/) - Guide to reproducible research
+- [Software Carpentry](https://software-carpentry.org/) - Computing skills for researchers
+- [Research Computing at LSE](https://info.lse.ac.uk/staff/divisions/dts/help/guides-faqs/fasd-guides/Research-Computing) - LSE-specific resources
+
+### SSH and Security
+- [SSH Key Management](https://www.ssh.com/academy/ssh/keygen) - SSH key generation guide
+- [GCP IAM Best Practices](https://cloud.google.com/iam/docs/using-iam-securely) - Identity and access management
+- [Two-Factor Authentication](https://cloud.google.com/identity/solutions/enforce-mfa) - Securing your Google account
+
+---
+
+## **Troubleshooting**
+
+### Common Issues
+
+| Issue | Solution |
+|-------|----------|
+| Can't connect via SSH | Check that your VM is running and your IP address hasn't changed. Verify your SSH key is correctly added to the VM. |
+| "Permission denied (publickey)" | Ensure your private key path is correct in your SSH config and the public key is added to GCP. |
+| VM is slow | Consider upgrading to a larger machine type or check for resource-intensive processes. |
+| Running out of disk space | Add a persistent disk or expand your boot disk in the GCP console. |
+| Connection timeout | Check that your firewall rules allow SSH traffic (port 22). |
+
+For more help, see the [GCP Troubleshooting Guide](https://cloud.google.com/compute/docs/troubleshooting).
+
+---
+
+## **Questions or Feedback?**
+
+This guide is maintained by the Applied Economics with AI community. If you have any questions, suggestions, or encounter issues:
+
+- [Open an issue](https://github.com/Applied-Economics-With-AI/guides/issues) on our GitHub repository
+- Contact: [Peter John Lambert](mailto:p.j.lambert@lse.ac.uk) at LSE
+
+We hope this guide helps you enhance your research capabilities. Happy coding!
+
+---
+
+*Last updated: January 2026*
